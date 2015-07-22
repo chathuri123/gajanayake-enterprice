@@ -29,7 +29,7 @@
     					<h2 id="site-description">Bike sales System</h2>
     						    					
 
-                                        <a  href="login.jsp" id="more-site" class="btn btn-default btn-lg">Logged as <% out.print(session.getAttribute("EmpUserName")); %></a>
+                                        <a  href="#" id="more-site" class="btn btn-default btn-lg">Logged as <% out.print(session.getAttribute("EmpUserName")); %></a>
     				</div>
 
     			<img style="position: absolute; left: 0px; top: -111px; right: auto; bottom: auto; height: auto; width: 100%;" class="header-img" src="bike/header1.jpg" alt="">
