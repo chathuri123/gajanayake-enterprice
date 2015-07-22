@@ -21,6 +21,11 @@ public class User
     private String nicNo;
     private String password;
     
+    User()
+    {
+        
+    }
+    
     
     
     
