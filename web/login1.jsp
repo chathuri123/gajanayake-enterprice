@@ -28,7 +28,7 @@ String UserID="";
  try{
       //STEP 2: Register JDBC driver
       
-      String sql = "SELECT * FROM employee where username='"+user+"' and  Password='"+pass+"'";
+      String sql = "SELECT * FROM employee where username='"+user+"' and  password='"+pass+"'";
       
       try
         {

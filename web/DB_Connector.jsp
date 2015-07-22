@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
+
 <html> 
 <head> 
 <title>Connection with mysql database</title>
