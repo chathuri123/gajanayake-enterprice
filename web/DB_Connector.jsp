@@ -1,11 +1,7 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 
-<html> 
-<head> 
-<title>Connection with mysql database</title>
-</head> 
-<body>
+
 <h1>Connection status</h1>
 <% 
     Connection conn = null; 
@@ -21,6 +17,3 @@ try {
             out.println("Unable to connect to database"+ex);
         }   
 %>
-</font>
-</body> 
-</html>
