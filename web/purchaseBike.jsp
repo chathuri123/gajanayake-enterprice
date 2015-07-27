@@ -71,7 +71,7 @@
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Customer</h1>
+						<h1 class="entry-title">Purchase Bike</h1>
 
 					    <!-- .entry-content -->
 

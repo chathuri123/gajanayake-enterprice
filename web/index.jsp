@@ -22,7 +22,7 @@
     				<div id="site-meta">
     					<h1 id="site-title">
     						<a href="index.jsp" title="Gajanayake Enterprices" rel="home">
-      <span style="display: inline-block; transition: none 0s ease 0s ; transform: translateX(-3px) translateY(6px) rotate(0deg);" >Gajanayake Enterprice</span></a>
+      <span style="display: inline-block; transition: none 0s ease 0s ; transform: translateX(-3px) translateY(6px) rotate(0deg);background-color:rgba(0,0,0,0.72);" >Gajanayake Enterprice</span></a>
 
     					    					
     					
@@ -43,19 +43,19 @@
 				<div class="row">
 					<aside id="bavotasan_custom_text_widget-5" class="home-widget col-md-3 bavotasan_custom_text_widget">
                                             <a href="/"><i class="info fa fa-folder-open"></i></a>
-                                            <h3 class="home-widget-title"><a href="">Purchase a Bike</a></h3>
+                                            <h3 class="home-widget-title"><a href="purchaseBike.jsp">Purchase a Bike<br></br></a></h3>
 		<div class="textwidget">
 				</div>
-		<a href="" class="btn btn-info btn-lg">Enter</a></aside>
+		<a href="purchaseBike.jsp" class="btn btn-info btn-lg">Enter</a></aside>
                 <aside id="bavotasan_custom_text_widget-6" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="">
                         <i class="success fa fa-pied-piper-alt"></i></a><h3 class="home-widget-title">
-                        <a href="/">Bike Management</a></h3>
+                            <a href="/">Bike Management<br></br></a></h3>
 		<div class="textwidget">
 				</div>
 		<a href="" class="btn btn-success btn-lg">Enter</a></aside>
                 <aside id="bavotasan_custom_text_widget-7" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="">
                         <i class="warning fa fa-user"></i></a>
-                <h3 class="home-widget-title"><a href="">View Accounts</a></h3>
+                    <h3 class="home-widget-title"><a href="">View Accounts<br></br></a></h3>
 		<div class="textwidget">
 	        <a href="" class="btn btn-warning btn-lg">Enter</a></aside>
                 <aside id="bavotasan_custom_text_widget-8" class="home-widget col-md-3 bavotasan_custom_text_widget">
