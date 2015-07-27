@@ -1,23 +1,16 @@
-<%-- 
+<%--
+..................
     Document   : AddSpareparts
     Created on : Jun 30, 2015, 5:46:57 PM
-    Author     : windya yasas
+    Author     : Chathuri Lakmini 
 --%>
 
-
-
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 
 <script>
-
-/*function btn() {
-  var y = document.getElementById('fname');
-  alert(y)
-
-}*/
-
 
 </script>
 
@@ -48,30 +41,54 @@
 	
 	
 <div id="respond" class="comment-respond">
-<form action="AddCourse1.php" method="post"  class="comment-form" >
+    
+<form action="AddSpareParts1.jsp" method="post"  class="comment-form" >
+<br>							
+<p ><label>Category</label> <br>
+    <select name="iname" id="iname" style="width:150px" onChange="JSGetSelectedItem()">
+        
+        <c:forEach var="v_Init" items="${ma_Init}">
+                    <option value="scem">${v_Init.schem}</option>
+        </c:forEach>
+        <option value="1">Light
+        
+        </option> 
+        <option value="2">head</option>
+        <option value="">hello</option>
+        <option value="">loop</option>
+    </select>
+</p>
 
-							
-<p ><label for="author">Full Name </label> 
-<input  type="name" id="fname"  onchange="btn()"  size="70" aria-required="true" name="Cname" required placeholder="Enter the coursename"></p>
-<p ><label for="author">ID no </label> 
-<input  onmousemove="btn()" type="time"  size="70" aria-required="true" name="TDue" required placeholder="Enter the time duration"></p>
-<p ><label for="author">Address </label> 
-<input  onmousemove="btn()" type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the start date"></p>
-<p><label for="author">Phone no</label> 
-<input  type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
-<p ><label for="author">Email</label> 
-<input id="" type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
-
+<p><label>Sub-Category</label><br>
+    <select name="subcat" id="subcat" style="width:150px"></select>
+    </p>
+        
+<p ><label>Model Number</label> 
+<input  onmousemove="btn()" type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
+<p ><label>Shell Number</label> 
+<input  onmousemove="btn()" type="text" name="shellNo" size="70" aria-required="true" id="shellNo" required placeholder="Enter the shell number"></p>
+<p><label>Purchase Rate</label> 
+<input  onmousemove="btn()" type="text" name="purrate" size="70" aria-required="true" id="purrate" required placeholder="Enter the purchase rate"></p>
+<p><label>Sales Rate</label> 
+<input  onmousemove="btn()" type="text" name="salesrate" size="70" aria-required="true" id="salesrate" required placeholder="Enter the sales rate"></p>
+<p><label>Quantity</label> 
+<input  type="number"  size="70" aria-required="true" name="qty" id="qty" required placeholder="Enter the Quantity"></p>
+<p><label>Description</label> 
+    <textarea rows="4" aria-required="true" name="descrip" id="descrip" required placeholder="Enter the Desription"></textarea></p>
+<br>
 <p class="form-submit">
-<input type="submit" class="submit" value="Add Customer"> 
+<input type="submit" class="submit" value="Add"> 
 </p>					
 </form>
+        
+                
+                
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" >
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Spare Part Item</h1>
+						<h1 class="entry-title">Add Spare Parts </h1>
 
 					    <!-- .entry-content -->
 
