@@ -24,7 +24,7 @@
 
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
- <%@include file="DB_Connect.jsp"%>    
+ <%@include file="DB_Connector.jsp"%>    
 	<div id="page">
 
 		<header id="header">
@@ -57,7 +57,7 @@
 <input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Enter the Item name"></p>
 </form>
 
- <%     
+ <%
  Statement stmt = conn.createStatement();
  ResultSet rs = stmt.executeQuery("select * from spareparts");%>
  
