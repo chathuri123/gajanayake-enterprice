@@ -42,7 +42,7 @@
 	
 <div id="respond" class="comment-respond">
     
-<form action="AddSpareParts1.jsp" method="post"  class="comment-form" >
+<form action="purchaseBike1.jsp" method="post"  class="comment-form" >
 <br>							
 <p ><label>Select Customer</label> <br>
     <select name="iname" id="iname" style="width:150px" onChange="JSGetSelectedItem()">
@@ -57,7 +57,9 @@
         <option value="">hello</option>
         <option value="">loop</option>
     </select>
+    
 </p>
+<p><input type="submit" class="submit" value="Add Customer">     </p>
 
 <p><label>Select Bike Brand</label><br>
     <select name="BBrand" id="BBrand" style="width:150px"></select>
@@ -68,6 +70,10 @@
     <p><label>Select Engine and Chasis no</label> <br>
     <select name="BEnginNo" id="BEnginNo" style="width:350px"></select>
 </p>
+<p><label>Discount</label> <br>
+    <input  onmousemove="btn()" type="number" name="Discount" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Discount"></p>
+
+</p>
 <p><label>Select Payment type</label> <br>
     <select name="Ptype" id="Ptype" style="width:150px">
         <option value="">Leasing</option>
@@ -75,21 +81,12 @@
     </select>
 </p>
         
-<p ><label>Model Number</label> 
+<p ><label>Current Pay Amount</label> 
 <input  onmousemove="btn()" type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
-<p ><label>Shell Number</label> 
-<input  onmousemove="btn()" type="text" name="shellNo" size="70" aria-required="true" id="shellNo" required placeholder="Enter the shell number"></p>
-<p><label>Purchase Rate</label> 
-<input  onmousemove="btn()" type="text" name="purrate" size="70" aria-required="true" id="purrate" required placeholder="Enter the purchase rate"></p>
-<p><label>Sales Rate</label> 
-<input  onmousemove="btn()" type="text" name="salesrate" size="70" aria-required="true" id="salesrate" required placeholder="Enter the sales rate"></p>
-<p><label>Quantity</label> 
-<input  type="number"  size="70" aria-required="true" name="qty" id="qty" required placeholder="Enter the Quantity"></p>
-<p><label>Description</label> 
-    <textarea rows="4" aria-required="true" name="descrip" id="descrip" required placeholder="Enter the Desription"></textarea></p>
 <br>
+<p>Release Bike And Leave as a pending transaction</p>
 <p class="form-submit">
-<input type="submit" class="submit" value="Add"> 
+<input type="submit" class="submit" value="Release"> 
 </p>					
 </form>
         
@@ -108,8 +105,19 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
-
-
+    <form action="purchaseBike1.jsp" method="post"  class="comment-form" >
+<p><label>Leasing Company</label><br>
+    <select name="BBrand" id="BBrand" style="width:150px"></select>
+    </p>
+    <p>Least Down payment : </p>
+<p><label>No Of years</label><br>
+    <select name="BBrand" id="BBrand" style="width:150px"></select>
+    </p>
+    <p>Estimated monthly payment : </p>
+    <p class="form-submit">
+<input type="submit" class="submit" value="Submit"> 
+</p>	
+    </form>  
 </aside>
 
 </div><!-- #secondary.widget-area -->		</div>

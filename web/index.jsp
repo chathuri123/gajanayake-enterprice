@@ -42,7 +42,7 @@
 			<div class="container">
 				<div class="row">
 					<aside id="bavotasan_custom_text_widget-5" class="home-widget col-md-3 bavotasan_custom_text_widget">
-                                            <a href="/"><i class="info fa fa-folder-open"></i></a>
+                                            <a href="purchaseBike.jsp"><i class="info fa fa-folder-open"></i></a>
                                             <h3 class="home-widget-title"><a href="purchaseBike.jsp">Purchase a Bike<br></br></a></h3>
 		<div class="textwidget">
 				</div>
