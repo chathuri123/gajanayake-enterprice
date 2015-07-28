@@ -37,6 +37,7 @@
 		</header>
 
 		<main>
+                     <br>  
 	<div class="container">
 		<div class="row">
 
@@ -96,7 +97,7 @@
 			
 				<div id="secondary" class="col-md-4" >
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">View Product Details</h1>
+						<h1 class="entry-title">View Customer Details</h1>
 
 					    <!-- .entry-content -->
 

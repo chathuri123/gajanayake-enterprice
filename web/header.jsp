@@ -67,9 +67,9 @@
 <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Sales Services <b class="caret"></b></a>
 <ul class="dropdown-menu">
 	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
-<a href="">Add Insurance Company</a></li>
+<a href="AddInsuranceCompany.jsp">Add Insurance Company</a></li>
 	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
-<a href="">Add Leasing Company</a></li>
+<a href="AddLeasingCompany.jsp">Add Leasing Company</a></li>
 	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">
 <a href="">Manipulate Registration Details</a></li>
        

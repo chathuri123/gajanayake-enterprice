@@ -47,12 +47,12 @@
 		<div class="textwidget">
 				</div>
 		<a href="purchaseBike.jsp" class="btn btn-info btn-lg">Enter</a></aside>
-                <aside id="bavotasan_custom_text_widget-6" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="">
+                <aside id="bavotasan_custom_text_widget-6" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="PurchaseSpareP.jsp">
                         <i class="success fa fa-pied-piper-alt"></i></a><h3 class="home-widget-title">
-                            <a href="/">Bike Management<br></br></a></h3>
+                            <a href="PurchaseSpareP.jsp">Purchase Spare Parts<br></br></a></h3>
 		<div class="textwidget">
 				</div>
-		<a href="" class="btn btn-success btn-lg">Enter</a></aside>
+		<a href="PurchaseSpareP.jsp" class="btn btn-success btn-lg">Enter</a></aside>
                 <aside id="bavotasan_custom_text_widget-7" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="">
                         <i class="warning fa fa-user"></i></a>
                     <h3 class="home-widget-title"><a href="">View Accounts<br></br></a></h3>
