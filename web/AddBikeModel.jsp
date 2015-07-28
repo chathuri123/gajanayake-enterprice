@@ -61,22 +61,22 @@
 <p ><label>Country </label> 
 <input  type="name" id="Bname" name="Bname"  size="70" aria-required="true" required placeholder="Enter the country"></p>
 
-<p ><label>Transmission Type </label>
-    <select name="Cname" id="Cname" >
+<p ><label>Transmission Type </label><br>
+    <select name="Cname" id="Cname" style="width:150px" >
         <option value="manual">Manual</option>
         <option value="auto">Auto</option>
     </select>
 </p>
 
-<p><label>Meter Type</label> 
-    <select name="Dname" id="Dname">  
+<p><label>Meter Type</label> <br>
+    <select name="Dname" id="Dname" style="width:150px">  
         <option value="digital">Digital</option>
         <option value="analog">Analog</option>
     </select>
 </p>
 
-<p ><label>Bike Type</label> 
-    <select id="Ename" name="Ename" >
+<p ><label>Bike Type</label> <br>
+    <select id="Ename" name="Ename" style="width:150px" >
         <option value="standard">Standard</option>
         <option value="cruiser">Cruiser</option>
         <option value="sport bike">Sport Bike</option>

@@ -1,9 +1,8 @@
 <%-- 
-    Document   : ViewSpareParts
-    Created on : 04-Jul-2015, 01:25:22
-    Author     : chathuri lakmini
+    Document   : ViewCustomers
+    Created on : Jul 28, 2015, 6:21:59 AM
+    Author     : windya yasas
 --%>
-
 
 <%@page import="javax.servlet.*"%>
 <%@page import="javax.servlet.http.*"%>
@@ -53,8 +52,8 @@
 <br>
 
 <form action="ViewSpareParts1.jsp" method="post"  class="comment-form">
-<p ><label>Item Name</label> 
-<input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search By Name / catagoty / ID"></p>
+<p ><label>Customer</label> 
+<input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search by cutomer Name/ID/Nic"></p>
 </form>
 
  <%
@@ -119,3 +118,4 @@
 
 
 </body></html>
+

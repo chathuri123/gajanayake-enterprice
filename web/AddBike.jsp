@@ -48,15 +48,15 @@
 <div id="respond" class="comment-respond">
 <form action="AddCourse1.php" method="post"  class="comment-form" >
 
-    <p ><label>Select Brand </label>
-    <select name="Dname" id="Dname" >
+    <p ><label>Select Brand </label><br>
+    <select name="Dname" id="Dname" style="width:150px" >
         <option value="1">1</option>
         <option value="2">2</option>
     </select>
 </p>
 
-<p ><label>Select Model </label>
-    <select name="Ename" id="Ename" >
+<p ><label>Select Model </label><br>
+    <select name="Ename" id="Ename" style="width:150px" >
         <option value="1">1</option>
         <option value="2">2</option>
     </select>

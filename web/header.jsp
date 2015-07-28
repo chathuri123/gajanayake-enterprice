@@ -28,7 +28,7 @@
 <a href="AddCustomer.jsp">Add Customer</a></li>
 	
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
-<a href="">View Customer</a></li>
+<a href="ViewCustomers.jsp">View Customer</a></li>
         <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
 <a href="">Get Customer Reports</a></li>
 </ul>
@@ -55,7 +55,7 @@
         <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
 <a href="AddBikeModel.jsp">Add Bike Model</a></li>
 	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
-<a href="">View Bike</a></li>
+<a href="ViewBikes.jsp">View Bike</a></li>
          <li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107">
 <a href="">Get Bike Reports</a></li>
 	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">

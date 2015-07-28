@@ -6,7 +6,7 @@
 <title>Connection with mysql database</title>
 </head> 
 <body>
-<h1>Connection status</h1>
+<h1></h1>
 <% 
     Connection conn = null; 
 try {
@@ -15,7 +15,7 @@ try {
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
             conn = DriverManager.getConnection(connectionURL, "root", "");
             if(!conn.isClosed())
-                 out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+                 out.println("");
           
         }catch(Exception ex){
             out.println("Unable to connect to database"+ex);
