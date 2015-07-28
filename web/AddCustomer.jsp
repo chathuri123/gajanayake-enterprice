@@ -44,7 +44,14 @@
 
 					
 <div id="comments" class="comments-area">
-	
+<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title">Add Customer</h1>
+
+					    <!-- .entry-content -->
+
+					    	<footer class="clearfix">
+	    	</footer><!-- .entry -->
+					</article>	
 	
 <div id="respond" class="comment-respond">
 <form action="AddCourse1.php" method="post"  class="comment-form" >
@@ -72,7 +79,7 @@
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Customer</h1>
+						<h3>Add Customer</h3>
 
 					    <!-- .entry-content -->
 

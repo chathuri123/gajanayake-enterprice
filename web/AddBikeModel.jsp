@@ -51,7 +51,14 @@
 					
 <div id="comments" class="comments-area">
 	
-	
+<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title">Add Bike Model</h1>
+
+					    <!-- .entry-content -->
+
+					    	<footer class="clearfix">
+	    	</footer><!-- .entry -->
+					</article>	
 <div id="respond" class="comment-respond">
 <form action="AddCourse1.php" method="post"  class="comment-form" >
 
@@ -169,16 +176,31 @@
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Bike Model</h1>
+                                    <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h3>Upload Bike Picture</h3>
 
 					    <!-- .entry-content -->
 
 					    	<footer class="clearfix">
 	    	</footer><!-- .entry -->
 					</article>
-<aside id="search-2" class="widget widget_search">
 
+
+<aside id="search-2" class="widget widget_search">
+<div id="upload-area">
+   
+	<div id="preview" style="padding:10px">
+		<img width="400px" height="400px" src="Images/Suzuki-Gixxer.jpg" id="thumb">
+	</div>
+
+	<form action="/playground/ajax_upload" id="newHotnessForm">
+		
+                <p><input type="file" size="20" id="imageUpload" ></p>
+                <p class="form-submit">
+		<button  type="submit">Upload</button>
+                </p>
+	</form>
+</div>
 
 </aside>
 

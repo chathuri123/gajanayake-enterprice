@@ -51,15 +51,21 @@
 
     <p ><label>Select Brand </label><br>
     <select name="Dname" id="Dname" style="width:150px" >
-        <option value="1">1</option>
-        <option value="2">2</option>
+        <option value="1">Bajaj</option>
+        <option value="2">TVS</option>
     </select>
 </p>
 
 <p ><label>Select Model </label><br>
     <select name="Ename" id="Ename" style="width:150px" >
-        <option value="1">1</option>
+        <option value="1">Discover 125</option>
         <option value="2">2</option>
+    </select>
+</p>
+<p ><label>Select Supplier </label><br>
+    <select name="Supplier" id="Supplier" style="width:250px" >
+        <option value="1">K.K. Madhushan</option>
+        <option value="2"></option>
     </select>
 </p>
 							
