@@ -45,20 +45,10 @@
     
 <form action="purchaseBike1.jsp" method="post"  class="comment-form" >
 <br>							
-<p ><label>Select Customer</label> <br>
-    <select name="iname" id="iname" style="width:150px" onChange="JSGetSelectedItem()">
+<p ><label>Customer </label><br>
         
-        <c:forEach var="v_Init" items="${ma_Init}">
-                    <option value="scem">${v_Init.schem}</option>
-        </c:forEach>
-        <option value="1">Light
-        
-        </option> 
-        <option value="2">head</option>
-        <option value="">hello</option>
-        <option value="">loop</option>
-    </select><a href="AddCustomer.jsp" style="padding:10px">Add Customer</a>
-    
+<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Customer Using NIC/ID/Name"></p>
+<p><a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
 </p>
 
 <p><label>Select Bike Brand</label><br>
