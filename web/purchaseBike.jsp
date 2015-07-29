@@ -67,7 +67,7 @@
 <p><label>Select Bike Model</label><br>
     <select name="Bmodel" id="Bmodel" style="width:150px"></select>
     </p>
-    <p><label>Select Engine and Chasis no</label> <br>
+<p><label>Select Engine and Chassis no</label> <br>
     <select name="BEnginNo" id="BEnginNo" style="width:350px"></select>
 </p>
 <p><label>Discount</label> <br>

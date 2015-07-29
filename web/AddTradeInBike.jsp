@@ -57,113 +57,50 @@
 <form action="AddTradein1.php" method="post"  class="comment-form" >
 
 							
-<p ><label>Model No. </label> 
-<input  type="name" id="Aname" name="Aname"  onchange="btn()"  size="70" aria-required="true" required placeholder="Enter the model no."></p>
 
-<p ><label>Country </label> 
-<input  type="name" id="Bname" name="Bname"  size="70" aria-required="true" required placeholder="Enter the country"></p>
-
-<p ><label>Transmission Type </label><br>
-    <select name="Cname" id="Cname" style="width:150px" >
-        <option value="manual">Manual</option>
-        <option value="auto">Auto</option>
-    </select>
+<p ><label>Customer </label><br>
+        
+<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Customer Using NIC/ID/Name"></p>
+<p><a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
 </p>
+<p><label>Bike Brand</label><br>
+    <select name="subcat" id="subcat" style="width:150px">
+         <option value="2">Suzuki</option>
+        <option value="">TVS</option>
+        <option value="">Honda</option>
+    </select><a href="AddBikeBrand.jsp" style="padding:10px">Add Brand</a>
+    </p>
+    <p><label>Bike Model</label><br>
+    <select name="subcat" id="subcat" style="width:150px">
+         <option value="2">Gixxer</option>
+        <option value="">GS125</option>
+        <option value="">GN125</option>
+    </select><a href="AddBikeModel.jsp" style="padding:10px">Add Model</a>
+    </p>
+<p ><label>Engine No </label>    
+<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Enter the engine No"></p>
 
-<p><label>Meter Type</label> <br>
-    <select name="Dname" id="Dname" style="width:150px">  
-        <option value="digital">Digital</option>
-        <option value="analog">Analog</option>
-    </select>
-</p>
+<p ><label>Chassis No </label> 
+<input  type="name" id="Gname" name="Gname"  size="70" aria-required="true" required placeholder="Enter the chassis no"></p>
 
-<p ><label>Bike Type</label> <br>
-    <select id="Ename" name="Ename" style="width:150px" >
-        <option value="standard">Standard</option>
-        <option value="cruiser">Cruiser</option>
-        <option value="sport bike">Sport Bike</option>
-        <option value="touring">Touring</option>
-        <option value="scooters">Scooters</option>
-        <option value="underbones">Underbones</option>
-        <option value="mopeds">Mopeds</option>
-        <option value="off road">Off Road</option>
-    </select>
-</p>
+<p ><label>Registered Year </label> 
+<input  type="number" id="Hname" name="Hname"  size="70" aria-required="true" required placeholder="Enter the max power"></p>
 
-<p ><label>Engine Type </label>    
-<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Enter the engine type"></p>
+<p ><label>Body Condition </label> 
+    <input  type="number" id="Iname" name="Iname"  size="70" aria-required="true" required placeholder="100%" ></p>
+<p ><label>Engine Condition </label> 
+    <input  type="number" id="Iname" name="Iname"  size="70" aria-required="true" required placeholder="100%" ></p>
+<p ><label>Tire Condition </label> 
+    <input  type="number" id="Iname" name="Iname"  size="70" aria-required="true" required placeholder="100%" ></p>
+<p ><label>Over Role Condition </label> 
+    <input  type="number" id="Iname" name="Iname"  size="70" aria-required="true" required placeholder="100%" ></p>
+<p><label>Description</label> 
+    <textarea rows="4" aria-required="true" name="descrip" id="descrip" required placeholder="Enter the Desription"></textarea></p>
 
-<p ><label>Displacement </label> 
-<input  type="name" id="Gname" name="Gname"  size="70" aria-required="true" required placeholder="Enter the displacement"></p>
 
-<p ><label>Max Power </label> 
-<input  type="name" id="Hname" name="Hname"  size="70" aria-required="true" required placeholder="Enter the max power"></p>
 
-<p ><label>Max Toque </label> 
-<input  type="name" id="Iname" name="Iname"  size="70" aria-required="true" required placeholder="Enter the max toque"></p>
-
-<p ><label>Starter System </label> 
-     <select id="Jname" name="Jname" >
-        <option value="electric">Electric</option>
-        <option value="kick start">Kick Start</option>
-     </select>
-</p>
-        
-        <p ><label>Suspension </label> </p>
-        <p <label>Front Suspension</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the suspension type"></p>
-        <p <label>Rear Suspension</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the suspension type"></p>
-        
- <p ><label>Tire Size </label> </p>
-        <p <label>Front Tire</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the tire size"></p>
-        <p <label>Rear Tire</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the tire size"></p>
-        
-         <p ><label>Brake System </label> </p>
-        <p <label>Front Brake</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the brake system type"></p>
-        <p <label>Rear Brake</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the brake system type"></p>
-        
-         <p ><label>Dimensions </label> </p>
-        <p <label>Length</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the length"></p>
-        <p <label>Width</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the width"></p>
-        <p <label>Height</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the height"></p>
-        <p <label>Wheelbase</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the wheel base"></p>
-        <p <label>Ground Clearance</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter ground clearance"></p>
-        <p <label>Seat Height</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter seat height"></p>
-        
-        <p <label>Kerb Weight</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the kerb weight"></p>
-        
-        <p ><label>Electrical Specifications </label> </p>
-        <p <label>Battery</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the battery type"></p>
-        <p <label>Head Lamp</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the head lamp type"></p>
-        
-        <p ><label>Fuel Tank </label> </p>
-        <p <label>Fuel Tank Capacity</label>
-<input  type="name" id="Kname" name="Kname"  size="70" aria-required="true" required placeholder="Enter the capacity"></p>
-        <p <label>Under Seat Space</label>
-<input  type="name" id="Lname" name="Lname"  size="70" aria-required="true" required placeholder="Enter the under seat space"></p>
-        
-        <p ><label>Valve System </label> 
-<input  type="name" id="Mname" name="Mname"  onchange="btn()"  size="70" aria-required="true" required placeholder="Enter the valve system type."></p>
-        
-        <p ><label>Bore & Stroke </label> 
-<input  type="name" id="Nname" name="Nname"  onchange="btn()"  size="70" aria-required="true" required placeholder="Enter the bore & stroke"></p>
-        
 <p class="form-submit">
-<input type="submit" class="submit" value="Add Bike Model"> 
+<input type="submit" class="submit" value="Send for Admin Approval"> 
 </p>					
 </form>
 							</div><!-- #respond -->
@@ -171,7 +108,7 @@
 			
 				<div id="secondary" class="col-md-4" role="complementary">
                                     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h3>Upload Bike Picture</h3>
+						<h3>Upload CR paper</h3>
 
 					    <!-- .entry-content -->
 
@@ -184,7 +121,7 @@
 <div id="upload-area">
    
 	<div id="preview" style="padding:10px">
-		<img width="400px" height="400px" src="Images/Suzuki-Gixxer.jpg" id="thumb">
+		<img width="400px" height="400px" src="Images/doc.jpg" id="thumb">
 	</div>
 
 	<form action="/playground/ajax_upload" id="newHotnessForm">
