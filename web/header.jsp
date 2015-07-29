@@ -76,10 +76,16 @@
 </ul>
 </li>
 <li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-100">
-<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="PostDeliveryIns.jsp">Post delivery Inspections </a>
-<!--<ul class="dropdown-menu">
+<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Post delivery Inspections<b class="caret"></b> </a>
+<ul class="dropdown-menu">
+    <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
+        <a href="AddService.jsp">Add Service</a></li>
+	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
+<a href="ViewTradeIn.jsp">View</a></li>
 	
-</ul>-->
+        <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">
+            <a href="Approvals">Generate Reports</a></li>
+</ul>
 </li>
 <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-96">
 <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Bike Trade In 

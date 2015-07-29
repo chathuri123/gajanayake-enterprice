@@ -4,12 +4,6 @@
     Author     : Kusal_Vitharanage
 --%>
 
-<%-- 
-    Document   : AddCustomer
-    Created on : Jun 30, 2015, 7:21:36 AM
-    Author     : windya yasas
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
@@ -62,7 +56,12 @@
 <div id="respond" class="comment-respond">
 <form action="AddCourse1.php" method="post"  class="comment-form" >
 
-							
+<p><label>Brand</label> <br>
+    <select style="border-ratio: 10px;width:200px" name="Brand" id="Dname" style="">  
+        <option value="digital">Bajaj</option>
+        <option value="analog">TVS</option>
+    </select>
+</p>							
 <p ><label>Model No. </label> 
 <input  type="name" id="Aname" name="Aname"  onchange="btn()"  size="70" aria-required="true" required placeholder="Enter the model no."></p>
 

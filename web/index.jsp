@@ -22,11 +22,11 @@
     				<div id="site-meta">
     					<h1 id="site-title">
     						<a href="index.jsp" title="Gajanayake Enterprices" rel="home">
-      <span style="display: inline-block; transition: none 0s ease 0s ; transform: translateX(-3px) translateY(6px) rotate(0deg);background-color:rgba(0,0,0,0.72);" >Gajanayake Enterprice</span></a>
+      <span style="display: inline-block; transition: none 0s ease 0s ; transform: translateX(-3px) translateY(6px) rotate(0deg);background-color:rgba(0,0,0,0.72); height: 120px" >Gajanayake Enterprice</span></a>
 
     					    					
     					
-    					<h2 id="site-description">Bike sales System</h2>
+    					<h2 id="site-description"></h2>
     						    					
 
                                         <a  href="#" id="more-site" class="btn btn-default btn-lg">Logged as <% out.print(session.getAttribute("EmpUserName")); %></a>
