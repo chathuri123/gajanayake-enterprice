@@ -79,7 +79,7 @@
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h3>Add Customer</h3>
+						<h3>Upload Customer image </h3>
 
 					    <!-- .entry-content -->
 
@@ -87,7 +87,21 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
+<div id="upload-area">
+   
+	<div id="preview" style="padding:10px">
+		<img width="400px" height="400px" src="Images/User.jpg" id="thumb">
+	</div>
 
+	<form action="/playground/ajax_upload" id="newHotnessForm">
+		
+                <p><input type="file" size="20" id="imageUpload" ></p>
+                <p class="form-submit">
+		<button  type="submit">Upload</button>
+                </p>
+	</form>
+    <p style="color: red">Optional * </p>
+</div>
 
 </aside>
 

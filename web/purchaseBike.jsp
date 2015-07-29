@@ -57,10 +57,9 @@
         <option value="2">head</option>
         <option value="">hello</option>
         <option value="">loop</option>
-    </select>
+    </select><a href="AddCustomer.jsp" style="padding:10px">Add Customer</a>
     
 </p>
-<p><input type="submit" class="submit" value="Add Customer">     </p>
 
 <p><label>Select Bike Brand</label><br>
     <select name="BBrand" id="BBrand" style="width:150px"></select>
@@ -85,7 +84,7 @@
 <p ><label>Current Pay Amount</label> 
 <input  onmousemove="btn()" type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
 <br>
-<p>Release Bike And Leave as a pending transaction</p>
+<p>Release Bike and Leave as a pending transaction</p>
 <p class="form-submit">
 <input type="submit" class="submit" value="Release"> 
 </p>					
