@@ -59,31 +59,33 @@
 
  <%
  Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from spare_parts");%>
+ ResultSet rs = stmt.executeQuery("select * from customers");%>
  
  <br>
  <table border="1" align="left" width="600">
 
   <tr>
-    <td>Item Name</td>
-    <td>Model No</td>
-    <td>Shell No</td>
-    <td>Purchase Rate</td>
-    <td>Sales Rate</td>
-    <td>Quantity</td>
+    <td>Customer ID</td>
+    <td>First name</td>
+    <td>Last name</td>
+    <td>Email</td>
+    <td>Address</td>
+    <td>NIC no</td>
+    <td></td>
     <td></td>
     
 
   </tr>
    <% while(rs.next()) {%>
   <tr>
-    <td><%=rs.getString("SpareId")%></td>
-    <td><%=rs.getString("Spare_Name") %></td>
-    <td><%=rs.getString("Shell_Number") %></td>
-    <td><%=rs.getDouble("Quantity") %></td>
-    <td><%=rs.getDouble("Model_Id") %></td>
-    <td><%=rs.getInt("Brand_Id") %></td>
+    <td><%=rs.getString("CusID")%></td>
+    <td><%=rs.getString("First_name") %></td>
+    <td><%=rs.getString("Last_name") %></td>
+    <td><%=rs.getString("Email") %></td>
+    <td><%=rs.getString("Address") %></td>
+    <td><%=rs.getString("NIC") %></td>
     <td><a href="">View/edit</a><td>
+    <td><a href="">Remove</a><td>
    
   </tr>
  <%}%>
@@ -105,7 +107,15 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
+    <div id="upload-area">
+   
+	<div id="preview" style="padding:10px">
+		<img width="400px" height="400px" src="Images/User.jpg" id="thumb">
+	</div>
 
+	
+    
+</div>
 
 </aside>
 

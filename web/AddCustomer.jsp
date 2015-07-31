@@ -64,11 +64,11 @@
 <p ><label for="author">Address </label> 
 <input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the start date"></p>
 <p ><label for="author">Date Of Birth </label> 
-<input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
+<input  onmousemove="btn()" type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 
 <input  type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
 <p ><label for="author">Email</label> 
-<input id="" type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
+<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
 
 <p class="form-submit">
 <input type="submit" class="submit" value="Add Customer"> 

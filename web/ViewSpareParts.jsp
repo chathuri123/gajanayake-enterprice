@@ -85,6 +85,7 @@
     <td><%=rs.getDouble("Model_Id") %></td>
     <td><%=rs.getInt("Brand_Id") %></td>
     <td><a href="">View/edit</a><td>
+    <td><a href="">Remove</a>
    
   </tr>
  <%}%>
@@ -106,7 +107,15 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
+<div id="upload-area">
+   
+	<div id="preview" style="padding:10px">
+		<img width="400px" height="400px" src="Images/Pisston.jpg" id="thumb">
+	</div>
 
+	
+    
+</div>
 
 </aside>
 

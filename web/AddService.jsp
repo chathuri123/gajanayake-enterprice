@@ -92,10 +92,50 @@
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
+                                    <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						
+<H3>Operations</H3>
+					    <!-- .entry-content -->
+
+					    	
+					</article>
 
 <aside id="search-2" class="widget widget_search">
+    <table>
+        <tr>
+            <td><label for="author">Servicing </label></td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Engine oil change</label></td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Engine oil filter change </label></td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Clean Spark plug </label></td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Adjust Clutch plate  </label></td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Adjust Brake pad</td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Check Brake fluid  </td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
+        <tr>
+            <td><label for="author">Check Drive chain slackness </td> 
+            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+        </tr>
 
-
+    </table>
 </aside>
 
 </div><!-- #secondary.widget-area -->		</div>

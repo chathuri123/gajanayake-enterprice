@@ -101,7 +101,19 @@
             <a href="Approvals">Generate Reports</a></li>
 </ul>
 </li>
-<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111">
-<a href="">Accounts handling</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-96">
+<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Accounts handling 
+<b class="caret"></b></a>
+<ul class="dropdown-menu">
+    <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
+        <a href="Expenditures.jsp">Expenditures</a></li>
+	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
+<a href="ViewExpenditures.jsp">View Expenditures</a></li>
+	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">
+<a href="Approvals">Account Reports</a></li>
+        
+</ul>
+</li>
+
 </ul>				</div>
 			</nav>
