@@ -5,10 +5,12 @@
     Author     : Chathuri Lakmini 
 --%>
 
+
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
+<%@include file="DB_Connector.jsp"%>    
 
 <script>
 
@@ -53,14 +55,21 @@
 <form action="AddSpareParts1.jsp" method="post"  class="comment-form" >
 <br>							
 <p ><label>Category</label> <br>
+    <%
+ Statement stmt = conn.createStatement();
+ ResultSet rs = stmt.executeQuery("select * from spare_parts");%>
     <select name="iname" id="iname" style="width:150px" onChange="JSGetSelectedItem()">
-        
+           <% while(rs.next()) {%>
+
+           <option><%=rs.getString("SpareId")%></option>%>
         
         
         <option value="2">Body parts</option>
         <option value="">Engine Parts</option>
         <option value="">Utility Parts</option>
+         <%}%>
     </select>
+                
 </p>
 
 <p><label>Sub-Category</label><br>
