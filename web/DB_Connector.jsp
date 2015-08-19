@@ -10,7 +10,7 @@
 <% 
     Connection conn = null; 
 try {
-            String connectionURL = "jdbc:mysql://localhost:3306/gajanayaka";
+            String connectionURL = "jdbc:mysql://localhost:3306/gajanayake";
             
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
             conn = DriverManager.getConnection(connectionURL, "root", "");

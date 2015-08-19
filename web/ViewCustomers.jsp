@@ -59,7 +59,7 @@
 
  <%
  Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from customers");%>
+ ResultSet rs = stmt.executeQuery("select * from user where LEFT(userID , 2) = 'EM'");%>
  
  <br>
  <table border="1" align="left" width="600">
@@ -78,9 +78,9 @@
   </tr>
    <% while(rs.next()) {%>
   <tr>
-    <td><%=rs.getString("CusID")%></td>
-    <td><%=rs.getString("First_name") %></td>
-    <td><%=rs.getString("Last_name") %></td>
+    <td><%=rs.getString("userID")%></td>
+    <td><%=rs.getString("fname") %></td>
+    <td><%=rs.getString("lname") %></td>
     <td><%=rs.getString("Email") %></td>
     <td><%=rs.getString("Address") %></td>
     <td><%=rs.getString("NIC") %></td>

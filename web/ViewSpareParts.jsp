@@ -60,7 +60,7 @@
 
  <%
  Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from spare_parts");%>
+ ResultSet rs = stmt.executeQuery("select * from spareparts");%>
  
  <br>
  <table border="1" align="left" width="600">
@@ -78,12 +78,12 @@
   </tr>
    <% while(rs.next()) {%>
   <tr>
-    <td><%=rs.getString("SpareId")%></td>
-    <td><%=rs.getString("Spare_Name") %></td>
-    <td><%=rs.getString("Shell_Number") %></td>
+    <td><%=rs.getString("SpartPartID")%></td>
+    <td><%=rs.getString("name") %></td>
+    <td><%=rs.getString("ShellNo") %></td>
     <td><%=rs.getDouble("Quantity") %></td>
-    <td><%=rs.getDouble("Model_Id") %></td>
-    <td><%=rs.getInt("Brand_Id") %></td>
+    <td><%=rs.getDouble("ModelID") %></td>
+   
     <td><a href="">View/edit</a><td>
     <td><a href="">Remove</a>
    

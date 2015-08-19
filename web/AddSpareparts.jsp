@@ -57,11 +57,11 @@
 <p ><label>Category</label> <br>
     <%
  Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from spare_parts");%>
+ ResultSet rs = stmt.executeQuery("select * from spareparts");%>
     <select name="iname" id="iname" style="width:150px" onChange="JSGetSelectedItem()">
            <% while(rs.next()) {%>
 
-           <option><%=rs.getString("SpareId")%></option>%>
+           <option><%=rs.getString("SpartPartID")%></option>%>
         
         
         <option value="2">Body parts</option>

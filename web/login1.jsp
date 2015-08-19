@@ -28,7 +28,7 @@ String UserID="";
  try{
       //STEP 2: Register JDBC driver
       
-      String sql = "SELECT * FROM employee where username='"+user+"' and  password='"+pass+"'";
+      String sql = "SELECT * FROM user where username='"+user+"' and  password='"+pass+"'";
       
       try
         {
@@ -38,7 +38,7 @@ String UserID="";
           {
             name=rs.getString("username");
             pass=rs.getString("password");
-            UserID=rs.getString("EmpID");
+            UserID=rs.getString("userID");
 
             count++;
           }
@@ -49,7 +49,7 @@ String UserID="";
           String ID= UserID.substring(0,2);
           System.out.println(ID);
         
-            if("em".equals(ID))
+            if("EM".equals(ID))
           {
                 
                response.sendRedirect("index.jsp");
