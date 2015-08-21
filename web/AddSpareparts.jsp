@@ -6,7 +6,7 @@
 --%>
 
 
-<!--sumudu de zoysa-->
+<!--sumudu-->
 
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
