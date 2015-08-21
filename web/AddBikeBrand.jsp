@@ -1,6 +1,6 @@
 <%-- 
-    Document   : AddCustomer
-    Created on : Jun 30, 2015, 7:21:36 AM
+    Document   : AddBikeBrand
+    Created on : July 03, 2015, 7:21:36 AM
     Author     : windya yasas
 --%>
 
@@ -9,13 +9,25 @@
 <%@include file="content.jsp" %>
 
 <script>
+$(document).ready(function(){
 
-/*function btn() {
-  var y = document.getElementById('fname');
-  alert(y)
+	var thumb = $('#thumb');	
 
-}*/
-
+	new AjaxUpload('imageUpload', {
+		action: $('#newHotnessForm').attr('action'),
+		name: 'image',
+		onSubmit: function(file, extension) {
+			$('#preview').addClass('loading');
+		},
+		onComplete: function(file, response) {
+			thumb.load(function(){
+				$('#preview').removeClass('loading');
+				thumb.unbind();
+			});
+			thumb.attr('src', response);
+		}
+	});
+});
 
 </script>
 
@@ -45,7 +57,7 @@
 					
 <div id="comments" class="comments-area">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Customer</h1>
+						<h1 class="entry-title">Add Bike Brand</h1>
 
 					    <!-- .entry-content -->
 
@@ -57,52 +69,44 @@
 <form action="AddCourse1.php" method="post"  class="comment-form" >
 
 							
-<p ><label for="author">Full Name </label> 
-<input  type="name" id="fname"  onchange="btn()"  size="70" aria-required="true" name="Cname" required placeholder="Enter the coursename"></p>
-<p ><label for="author">NIC no</label> 
-<input id="nic" type="name"  size="70" aria-required="true" name="nic" required placeholder="Enter the NIC no"></p>
-<p ><label for="author">Address </label> 
-<input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the start date"></p>
-<p ><label for="author">Date Of Birth </label> 
-<input  onmousemove="btn()" type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
-<p><label for="author">Phone no</label> 
-<input  type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
-<p ><label for="author">Email</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
+<p ><label>Brand Name </label> 
+<input  type="name" id="Bname"  onchange="btn()"  size="70" aria-required="true" name="Bname" required placeholder="Enter the brand name"></p>
+<p ><label>Description </label> 
+    <textarea  type="name" id="Bname"  onchange="btn()"  size="70" aria-required="true" name="Bname" required placeholder="Enter the Description"></textarea></p>
 
 <p class="form-submit">
-<input type="submit" class="submit" value="Add Customer"> 
+<input type="submit" class="submit" value="Add bikebrand"> 
 </p>					
 </form>
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h3>Upload Customer image </h3>
+                                    <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h3>Upload Brand Logo</h3>
 
 					    <!-- .entry-content -->
 
 					    	<footer class="clearfix">
 	    	</footer><!-- .entry -->
 					</article>
+
 <aside id="search-2" class="widget widget_search">
+   
 <div id="upload-area">
    
-	<div id="preview" style="padding:10px">
-		<img width="400px" height="400px" src="Images/User.jpg" id="thumb">
+	<div id="preview">
+		<img width="400px" height="400px" src="Images/suzukilogo.jpg" id="thumb">
 	</div>
 
 	<form action="/playground/ajax_upload" id="newHotnessForm">
 		
                 <p><input type="file" size="20" id="imageUpload" ></p>
                 <p class="form-submit">
-		<button  type="submit">Upload</button>
+		<button  type="submit">Upload Brand Logo</button>
                 </p>
 	</form>
-    <p style="color: red">Optional * </p>
 </div>
-
 </aside>
 
 </div><!-- #secondary.widget-area -->		</div>
