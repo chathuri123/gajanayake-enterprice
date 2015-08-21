@@ -1,4 +1,4 @@
-<%-- 
+ <%-- 
     Document   : AddCustomer
     Created on : Jun 30, 2015, 7:21:36 AM
     Author     : windya yasas
@@ -8,16 +8,7 @@
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 
-<script>
-
-/*function btn() {
-  var y = document.getElementById('fname');
-  alert(y)
-
-}*/
-
-
-</script>
+<script type="text/javascript" src="validateScript.js"></script>
 
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
@@ -54,19 +45,22 @@
 					</article>	
 	
 <div id="respond" class="comment-respond">
-<form action="AddCourse1.php" method="post"  class="comment-form" >
+<form  method="post"  class="comment-form" >
 
 							
-<p ><label for="author">Full Name </label> 
-<input  type="name" id="fname"  onchange="btn()"  size="70" aria-required="true" name="Cname" required placeholder="Enter the coursename"></p>
+<p ><label for="author">First Name </label> 
+<input  type="name" id="fname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpPost("fname1","fname")' name="fname" required placeholder="Enter the First name"><div id="fname1"></div></p>
+<p ><label for="author">Last Name </label> 
+    <input  type="name" id="lname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpPost("lname1","lname")' name="lname" required placeholder="Enter the  Last name"><div id="lname1"></div></p>
+
 <p ><label for="author">NIC no</label> 
-<input id="nic" type="name"  size="70" aria-required="true" name="nic" required placeholder="Enter the NIC no"></p>
+<input id="nic" type="name"  size="70" aria-required="true" name="nic" onblur=' JavaScript:xmlhttpPost("nic1","nic")' required placeholder="Enter the NIC no"><div id="nic1"></div></p>
 <p ><label for="author">Address </label> 
-<input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the start date"></p>
+<input   type="name"  size="70" aria-required="true" name="Address" onblur=' JavaScript:xmlhttpPost("Address1","Address")' required placeholder="Enter the start date"><div id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
 <input  onmousemove="btn()" type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 
-<input  type="name"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
+<input  type="number"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
 <p ><label for="author">Email</label> 
 <input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
 
