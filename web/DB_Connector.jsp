@@ -21,6 +21,5 @@ try {
             out.println("Unable to connect to database"+ex);
         }   
 %>
-</font>
 </body> 
 </html>
