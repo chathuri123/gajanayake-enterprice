@@ -78,7 +78,7 @@
   </tr>
    <% while(rs.next()) {%>
   <tr>
-    <td><%=rs.getString("SpartPartID")%></td>
+    <td><%=rs.getString("SparePartID")%></td>
     <td><%=rs.getString("name") %></td>
     <td><%=rs.getString("ShellNo") %></td>
     <td><%=rs.getDouble("Quantity") %></td>

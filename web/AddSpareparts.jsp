@@ -136,7 +136,7 @@ document.getElementById(field).innerHTML = str;
      <select name="supplier" id="supplier" style="width:250px" onChange="JSGetSelectedItem()">
         <% while(rs1.next()) {%>
 
-        <option><%=rs1.getString("nameWithIni")%></option>%>
+        <option><%=rs1.getString("nameWithIni")%></option>
         
         <%}%> 
     
@@ -153,7 +153,7 @@ document.getElementById(field).innerHTML = str;
              <select name="bbrand" id="bbrand" style="width:250px" onChange="JSGetSelectedItem()">
              <% while(rs2.next()) {%>
 
-             <option><%=rs2.getString("Bname")%></option>%>
+             <option><%=rs2.getString("Bname")%></option>
         
         <%}%>
     </select>
@@ -167,7 +167,7 @@ document.getElementById(field).innerHTML = str;
              <select name="bmodel" id="bmodel" style="width:250px" onChange="JSGetSelectedItem()">
              <% while(rs3.next()) {%>
 
-             <option><%=rs3.getString("Name")%></option>%>
+             <option><%=rs3.getString("Name")%></option>
         
         <%}%>
     </select>
