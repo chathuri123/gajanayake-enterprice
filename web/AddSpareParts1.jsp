@@ -18,23 +18,37 @@
         <title>Add Spare Parts Item</title>
     </head>
     <body>
-        <%@include file="DB_Connect.jsp"%>
+        <%@include file="DB_Connector.jsp"%>
+        <%
+            Statement stmt1 = conn.createStatement();
+            ResultSet rs1 = stmt1.executeQuery("select SupplierID from spareparts ");
+        %>
+            
         <%
     
-          String Iname=request.getParameter("iname");
+ 
+          String Category=request.getParameter("SubCat");
+          String Supplier=request.getParameter("supplier");
+          String Bmodel=request.getParameter("bmodel");
+          String Name=request.getParameter("Name");
           String ModelNo=request.getParameter("modelNo");
           String ShellNo=request.getParameter("shellNo");
-          double purprice=Double.parseDouble(request.getParameter("purrate"));
-          double saleprice=Double.parseDouble(request.getParameter("salesrate"));
-          int Quantity=Integer.parseInt(request.getParameter("qty"));
           String description=request.getParameter("descrip");
+          int Quantity=Integer.parseInt(request.getParameter("qty"));
+          
+          double purprice=Double.parseDouble(request.getParameter("pprice"));
+          double saleprice=Double.parseDouble(request.getParameter("sprice"));
+          double unitcost=Double.parseDouble(request.getParameter("unitcost"));
+          
+//          Sumudu De Zoysa
+          
 
          try
           { 
              Statement stat=conn.createStatement();
              
          
-             String sql="INSERT INTO gajanayakaent.spareparts(itemname,modelno,shellno,qty,purchaserate,salesrate,Description) VALUES('"+Iname+"','"+ModelNo+"','"+ShellNo+"','"+Quantity+"','"+purprice+"','"+saleprice+"','"+description+"')";
+             String sql="INSERT INTO gajanayake.spareparts(Quantity,unitcost) VALUES('"+Quantity+"','"+unitcost+"')";
              
              stat.executeUpdate(sql);
              
