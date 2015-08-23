@@ -36,8 +36,8 @@
           double saleprice=Double.parseDouble(request.getParameter("sprice"));
           double unitcost=Double.parseDouble(request.getParameter("unitcost"));
          
-        
-      //Increament ID    
+         
+         //Increament ID    
       Statement stmt1 = conn.createStatement();
       int id=0;
       String SpareP="SP";
