@@ -53,22 +53,9 @@
 
 <br>
 
-<form action="ViewSpareParts.jsp" method="post"  class="comment-form">
-    
-<p ><label>Item Name</label> 
-<input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search By Name"></p>
-</form>
-<%  
-
- String Iname=request.getParameter("iname");
- 
- Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from spareparts where Name LIKE '%"+Iname+"%'");
-%>
-
 <%
- //Statement stmt1 = conn.createStatement();
- //ResultSet rs1 = stmt1.executeQuery("select * from spareparts");%>
+ Statement stmt1 = conn.createStatement();
+ ResultSet rs1 = stmt1.executeQuery("select * from spareparts");%>
  
  <br>
  <table border="1" align="left" width="600">
@@ -84,19 +71,19 @@
    
 
   </tr>
-   <% while(rs.next()) {%>
+   <% while(rs1.next()) {%>
   <tr>
-    <td><%=rs.getString("SparePartID")%></td>
-    <td><%=rs.getString("name")%></td>
-    <td><%=rs.getString("SubCategory")%></td>
-    <td><%=rs.getString("ShellNo")%></td>
-    <td><%=rs.getString("PurchasePrice")%></td>
-    <td><%=rs.getString("SalePrice")%></td>
-    <td><%=rs.getString("Quantity")%></td>
+    <td><%=rs1.getString("SparePartID")%></td>
+    <td><%=rs1.getString("name")%></td>
+    <td><%=rs1.getString("SubCategory")%></td>
+    <td><%=rs1.getString("ShellNo")%></td>
+    <td><%=rs1.getString("PurchasePrice")%></td>
+    <td><%=rs1.getString("SalePrice")%></td>
+    <td><%=rs1.getString("Quantity")%></td>
     
   
-    <td><a href="ViewSpareParts1.jsp?spID=<%=rs.getString("SparePartID")%>">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>">Remove</a>
+    <td><a href="">View/edit</a><td>
+    <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>">Remove</a>
    
   </tr>
  <%}%>

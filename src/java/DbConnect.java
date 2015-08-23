@@ -8,7 +8,6 @@
  *
  * @author windya yasas
  */
-import com.mysql.jdbc.Connection;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.io.*;
