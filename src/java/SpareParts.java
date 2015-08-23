@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 
-package shop;
+
 
 /**
  *
  * @author windya yasas
  */
-public class Payments {
+public class SpareParts
+{
+    String ItemID;
+    
     
 }

@@ -9,6 +9,64 @@
 <%@include file="content.jsp" %>
 
 <script type="text/javascript" src="validateScript.js"></script>
+<script>
+function xmlhttpPost(field)
+{ 
+var xmlHttpReq = false; 
+var self = this; 
+
+// Mozilla/Safari 
+if (window.XMLHttpRequest) { 
+self.xmlHttpReq = new XMLHttpRequest(); 
+} 
+// IE 
+else if (window.ActiveXObject) { 
+self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
+} 
+self.xmlHttpReq.open('POST', "AddCustomer1.jsp", false); 
+self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
+self.xmlHttpReq.onreadystatechange = function()
+{
+    
+    if (self.xmlHttpReq.readyState != 4 && self.xmlHttpReq.status == 200)
+ {
+     document.getElementById(field).innerHTML = "Validating..";
+ }
+  else if (self.xmlHttpReq.readyState == 4)
+  { 
+     updatepage(field,self.xmlHttpReq.responseText); 
+  } 
+}
+var word1 ='fname='+ escape( document.getElementById('fname').value);
+var word2 ='lname='+ escape( document.getElementById('lname').value);
+var word3 ='nic='+ escape( document.getElementById('nic').value);
+var word4 ='Address='+ escape( document.getElementById('Address').value);
+var word5 ='BDay='+ escape( document.getElementById('BDay').value);
+var word6 ='tel='+ escape( document.getElementById('tel').value);
+var word7 ='email='+ escape( document.getElementById('email').value);
+
+
+
+var the_data =word1 +'&'+ word2+'&'+ word3+'&'+ word4+'&'+ word5+'&'+ word6+'&'+ word7;
+self.xmlHttpReq.send(the_data); 
+
+
+
+
+
+}
+
+
+
+
+function updatepage(field,str){ 
+document.getElementById(field).innerHTML = str;
+alert('Successfuly Added');
+
+
+} 
+
+</script>
 
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
@@ -59,7 +117,7 @@
 <p ><label for="author">Address </label> 
 <input   type="name"  size="70" aria-required="true" name="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"><div class="val" id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
-<input   type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
+<input   type="BDay"  size="70" aria-required="true" name="BDay" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 
 <input  type="number"  size="70" aria-required="true" name="tel" id="tel" onblur=' JavaScript:xmlhttpVPost("tel1","tel","Addcustomervalidate.jsp")' required placeholder="Enter the Telephone number"><div class="val" id="tel1"></div></p>
 <p ><label for="author">Email</label> 
