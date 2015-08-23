@@ -783,6 +783,11 @@ pre {
 
 .col-xs-pull-5 {
   right: 41.66667%; }
+.val
+{
+ color:red;
+ font-family:Candara;
+}
 
 .col-xs-pull-6 {
   right: 50%; }

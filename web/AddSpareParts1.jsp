@@ -14,16 +14,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Spare Parts Item</title>
+        
     </head>
     <body>
-        <%@include file="DB_Connector.jsp"%>
+         <%@include file="DB_Connector.jsp"%>
+       
         <%
            
        
     
- 
+         
           String Category=request.getParameter("SubCat");
           String Supplier=request.getParameter("supplier");
           String Bmodel=request.getParameter("bmodel");
@@ -32,9 +32,10 @@
           String ShellNo=request.getParameter("shellNo");
           String description=request.getParameter("descrip");
           int Quantity=Integer.parseInt(request.getParameter("qty"));
-          double  purprice=12122;
-          double  saleprice=12113;
-          double  unitcost=2323;
+          double purprice=Double.parseDouble(request.getParameter("pprice"));
+          double saleprice=Double.parseDouble(request.getParameter("sprice"));
+          double unitcost=Double.parseDouble(request.getParameter("unitcost"));
+         
         
       //Increament ID    
       Statement stmt1 = conn.createStatement();
@@ -91,6 +92,8 @@
              String sql="INSERT INTO `gajanayake`.`spareparts`(`SparePartID`,`Quantity`,`SubCategory`,`PurchasePrice`,`ShellNo`,`Description`,`ModelID`,`SupplierID`,`unitcost`,`SalePrice`,`Name`,`BModelID`) VALUES('"+SparePartID+"','"+Quantity+"','"+Category+"','"+purprice+"','"+ShellNo+"','"+description+"','"+ModelNo+"','"+Supplier+"','"+unitcost+"','"+saleprice+"','"+Name+"','"+Bmodel+"')";
              
              stat.executeUpdate(sql);
+            
+             
              
           
              

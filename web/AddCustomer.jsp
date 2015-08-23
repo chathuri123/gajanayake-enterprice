@@ -26,6 +26,7 @@
 		</header>
 
 		<main>
+                    <form  method="post"  class="comment-form" >
                     <br>
 	<div class="container">
 		<div class="row">
@@ -45,29 +46,29 @@
 					</article>	
 	
 <div id="respond" class="comment-respond">
-<form  method="post"  class="comment-form" >
+
 
 							
 <p ><label for="author">First Name </label> 
-<input  type="name" id="fname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpPost("fname1","fname")' name="fname" required placeholder="Enter the First name"><div id="fname1"></div></p>
+<input  type="name" id="fname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpVPost("fname1","fname","Addcustomervalidate.jsp")' name="fname" required placeholder="Enter the First name"><div class="val" id="fname1"></div></p>
 <p ><label for="author">Last Name </label> 
-    <input  type="name" id="lname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpPost("lname1","lname")' name="lname" required placeholder="Enter the  Last name"><div id="lname1"></div></p>
+    <input  type="name" id="lname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpVPost("lname1","lname","Addcustomervalidate.jsp")' name="lname" required placeholder="Enter the  Last name"><div class="val" id="lname1"></div></p>
 
 <p ><label for="author">NIC no</label> 
-<input id="nic" type="name"  size="70" aria-required="true" name="nic" onblur=' JavaScript:xmlhttpPost("nic1","nic")' required placeholder="Enter the NIC no"><div id="nic1"></div></p>
+<input id="nic" type="name"  size="70" aria-required="true" name="nic" onblur=' JavaScript:xmlhttpVPost("nic1","nic","Addcustomervalidate.jsp")' required placeholder="Enter the NIC no"><div class="val" id="nic1"></div></p>
 <p ><label for="author">Address </label> 
-<input   type="name"  size="70" aria-required="true" name="Address" onblur=' JavaScript:xmlhttpPost("Address1","Address")' required placeholder="Enter the start date"><div id="Address1"></div></p>
+<input   type="name"  size="70" aria-required="true" name="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"><div class="val" id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
-<input  onmousemove="btn()" type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
+<input   type="date"  size="70" aria-required="true" name="SDate" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 
-<input  type="number"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
+<input  type="number"  size="70" aria-required="true" name="tel" id="tel" onblur=' JavaScript:xmlhttpVPost("tel1","tel","Addcustomervalidate.jsp")' required placeholder="Enter the Telephone number"><div class="val" id="tel1"></div></p>
 <p ><label for="author">Email</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Fee Duration"></p>
+<input id="email" type="email"  size="70" aria-required="true" name="email" onblur=' JavaScript:xmlhttpVPost("email1","email","Addcustomervalidate.jsp")' required placeholder="Enter the Email Address"></p><div class="val" id="email1"></div>
 
 <p class="form-submit">
 <input type="submit" class="submit" value="Add Customer"> 
 </p>					
-</form>
+
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
@@ -87,13 +88,13 @@
 		<img width="400px" height="400px" src="Images/User.jpg" id="thumb">
 	</div>
 
-	<form action="/playground/ajax_upload" id="newHotnessForm">
+	
 		
                 <p><input type="file" size="20" id="imageUpload" ></p>
                 <p class="form-submit">
 		<button  type="submit">Upload</button>
                 </p>
-	</form>
+
     <p style="color: red">Optional * </p>
 </div>
 
@@ -101,8 +102,9 @@
 
 </div><!-- #secondary.widget-area -->		</div>
 	</div>
-
+        </form>
 	</main><!-- main -->
+        
         <%@include file="footer.jsp" %>
 </div><!-- #page -->
 
