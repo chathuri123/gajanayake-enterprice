@@ -60,6 +60,10 @@
       {
          RID="AD"; 
       }
+      else if(role.equals("DataEntryOperator"))
+      {
+         RID="DE"; 
+      }
       
       String userC="CS";
       try{
