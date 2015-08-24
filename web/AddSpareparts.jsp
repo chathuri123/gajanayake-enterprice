@@ -140,7 +140,7 @@ alert('Successfuly Added');
     <p><label>Supplier</label><br>
          <%
             Statement stmt1 = conn.createStatement();
-            ResultSet rs1 = stmt1.executeQuery("select * from user where supplier=true ");%>
+            ResultSet rs1 = stmt1.executeQuery("select * from user where supplier=1 ");%>
      <select name="supplier" id="supplier" style="width:250px" >
         <% while(rs1.next()) {%>
 

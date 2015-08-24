@@ -116,7 +116,7 @@ alert('Successfuly Added');
 <p ><label for="author">NIC no</label> 
 <input id="nic" type="name"  size="70" aria-required="true" name="nic" onblur=' JavaScript:xmlhttpVPost("nic1","nic","Addcustomervalidate.jsp")' required placeholder="Enter the NIC no"><div class="val" id="nic1"></div></p>
 <p ><label for="author">Address </label> 
-<input   type="name"  size="70" aria-required="true" name="Address" id="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"><div class="val" id="Address1"></div></p>
+ <textarea rows="4" aria-required="true" name="Address" id="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"></textarea></p><div class="val" id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
 <input   type="date"  size="70" aria-required="true" id="BDay" name="BDay" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 

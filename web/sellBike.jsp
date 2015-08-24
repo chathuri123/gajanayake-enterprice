@@ -34,8 +34,12 @@
                      <br>  
 	<div class="container">
 		<div class="row">
+                    
+                   
+                    
+<div id="primary" class="col-md-8 pull-left hfeed">
+   
 
-<div id="primary" class="col-md-8 pull-right hfeed">
 									<!-- #post-39 -->
 
 					
@@ -43,13 +47,28 @@
 	
 	
 <div id="respond" class="comment-respond">
+     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title">Sell Bike </h1>
+
+    </article>
     
-<form action="sellBike1.jsp" method="post"  class="comment-form" >
-<br>							
+<form action="sellBike1.jsp" method="post"  class="comment-form" >							
 <p ><label>Customer </label><br>
         
 <input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Customer Using NIC/ID/Name"></p>
-<p><a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
+ <%
+            Statement stmt1 = conn.createStatement();
+            ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=1 ");%>
+     <select name="Customer" id="Customer" style="width:350px" >
+        <% while(rs1.next()) {%>
+
+        <option>Customer ID<%=" - "+rs1.getString("userID")+" | "%> Name<%=" - "+rs1.getString("fname")+" "%></option>
+        
+        <%}%> 
+    
+    </select>
+    
+<a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
 </p>
 
  <p><label>Bike Brand</label><br>
@@ -70,14 +89,14 @@
     </p>
     <p><div id='Mbike'></div></p>
 
-<p><label>Discount</label> <br>
+<!--<p><label>Discount</label> <br>
     <input  onmousemove="btn()" type="number" name="Discount" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Discount"></p>
 
-</p>
+</p>-->
 <p><label>Select Payment type</label> <br>
-    <select name="Ptype" id="Ptype" style="width:150px">
-        <option value="">Leasing</option>
-        <option value="">Cash</option>
+    <select name="Ptype" id="Ptype" style="width:150px" onchange='JavaScript:xmlhttpVPost("Servises","Ptype","sellBikeValidate.jsp")' >
+        <option value="Leasing">Leasing</option>
+        <option value="Cash">Cash</option>
     </select>
 </p>
         
@@ -94,18 +113,14 @@
                 
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
+             
+
 			
 				<div id="secondary" class="col-md-4" >
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Purchase Bike </h1>
+                                     
 
-					    <!-- .entry-content -->
-
-					    	<footer class="clearfix">
-	    	</footer><!-- .entry -->
-					</article>
 <aside id="search-2" class="widget widget_search">
-    <form action="purchaseBike1.jsp" method="post"  class="comment-form" >
+    <div id="Servises"  class="comment-form" >
 <p><label>Leasing Company</label><br>
     <select name="BBrand" id="BBrand" style="width:150px"></select>
     </p>
@@ -117,7 +132,7 @@
     <p class="form-submit">
 <input type="submit" class="submit" value="Submit"> 
 </p>	
-    </form>  
+    </div>  
 </aside>
 
 </div><!-- #secondary.widget-area -->		</div>
