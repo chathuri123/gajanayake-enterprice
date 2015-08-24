@@ -64,7 +64,7 @@
       String userC="CS";
       try{
       stmt1 = conn.createStatement();
-      String sql = "SELECT userID FROM user WHERE userID LIKE 'CS%' ORDER BY userID DESC LIMIT 1 ";
+      String sql = "SELECT userID FROM user WHERE userID LIKE '"+RID+"%' ORDER BY userID DESC LIMIT 1 ";
       ResultSet rs = stmt1.executeQuery(sql);
       //where userID LIKE 'CS'
       

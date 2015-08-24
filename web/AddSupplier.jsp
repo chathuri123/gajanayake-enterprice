@@ -4,7 +4,7 @@
     Author     : windya yasas
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 
@@ -44,7 +44,7 @@ var word4 ='Address='+ escape( document.getElementById('Address').value);
 var word5 ='BDay='+ escape( document.getElementById('BDay').value);
 var word6 ='tel='+ escape( document.getElementById('tel').value);
 var word7 ='email='+ escape( document.getElementById('email').value);
-var word8 ='role='+escape(Supplier);
+var word8 ='role='+escape('Supplier');
 
 var the_data =word1 +'&'+ word2+'&'+ word3+'&'+ word4+'&'+ word5+'&'+ word6+'&'+ word7+'&'+ word8;
 self.xmlHttpReq.send(the_data); 
