@@ -22,10 +22,14 @@
 <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home active menu-item-91">
 <a href="index.jsp">Home</a></li>
 <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-103">
-<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Customer<b class="caret"></b></a>
+<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Users<b class="caret"></b></a>
 <ul class="dropdown-menu">
 	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
 <a href="AddCustomer.jsp">Add Customer</a></li>
+        <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
+<a href="AddSupplier.jsp">Add Supplier</a></li>
+        <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
+            <a href="AddEmployee.jsp">Add Employee</a></li>
 	
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
 <a href="ViewCustomers.jsp">View Customer</a></li>

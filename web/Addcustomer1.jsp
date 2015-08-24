@@ -33,21 +33,40 @@
           String Address=request.getParameter("Address");
           double tel=Double.parseDouble(request.getParameter("tel"));
           String email=request.getParameter("email");
+          String role=request.getParameter("role");
+          
+          
         
-        DbConnect DB=new DbConnect();
-       
-        User cus=new User(fname,lname,email,Address,nic,"","",BDay,tel);
-        cus.genNameWithIni(fname, lname);
+        
         
         
       //Increament ID    
       Statement stmt1 = conn.createStatement();
       int id=0;
+      String RID="";
+      if (role.equals("Customer"))
+      {
+          RID="CS";
+      }
+      else if(role.equals("Supplier"))
+      {
+         RID="SU"; 
+      }
+      else if(role.equals("Employee"))
+      {
+         RID="EM"; 
+      }
+      else if(role.equals("Administrator"))
+      {
+         RID="AD"; 
+      }
+      
       String userC="CS";
       try{
       stmt1 = conn.createStatement();
-      String sql = "SELECT userID FROM user ORDER BY userID DESC LIMIT 1";
+      String sql = "SELECT userID FROM user WHERE userID LIKE 'CS%' ORDER BY userID DESC LIMIT 1 ";
       ResultSet rs = stmt1.executeQuery(sql);
+      //where userID LIKE 'CS'
       
   
          while(rs.next())
@@ -61,10 +80,15 @@
       } 
      id=Integer.parseInt(userC.substring(2));
      id=id+1;
-     String userID="CS"+id;
+     String userID=RID+""+id;
       //End Of Increament Id
-     String fullname=fname+" "+lname;
      
+     String fullname=fname+" "+lname;
+     String password=userID;
+     String nameWithIni="jkoj";
+     String username=userID;
+     double salary=0;
+     double accBalance =0;
    
                  
             
@@ -74,11 +98,9 @@
           { 
              Statement stat=conn.createStatement();
              
-         
-             String sql="INSERT INTO `gajanayake`.`spareparts`(`SparePartID`,`Quantity`,`SubCategory`,`PurchasePrice`,`ShellNo`,`Description`,`ModelID`,`SupplierID`,`unitcost`,`SalePrice`,`Name`,`BModelID`) VALUES('"+SparePartID+"','"+Quantity+"','"+Category+"','"+purprice+"','"+ShellNo+"','"+description+"','"+ModelNo+"','"+Supplier+"','"+unitcost+"','"+saleprice+"','"+Name+"','"+Bmodel+"')";
-             
+             String sql="INSERT INTO `gajanayake`.`user`(`userID`,`fname`,`BDay`,`tel`,`Address`,`lname`,`password`,`Email`,`NIC`,`nameWithIni`,`salary`,`AccBalance`,`"+role+"`,`username`) VALUES('"+userID+"','"+fname+"','"+BDay+"','"+tel+"','"+Address+"','"+lname+"','"+password+"','"+email+"','"+nic+"','"+nameWithIni+"','"+salary+"','"+accBalance+"','1','"+username+"')";
              stat.executeUpdate(sql);
-            
+             %><%="Successfuly Added"%><%
              
              
           

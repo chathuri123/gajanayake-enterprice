@@ -44,7 +44,7 @@ var word4 ='Address='+ escape( document.getElementById('Address').value);
 var word5 ='BDay='+ escape( document.getElementById('BDay').value);
 var word6 ='tel='+ escape( document.getElementById('tel').value);
 var word7 ='email='+ escape( document.getElementById('email').value);
-var word8 ='role='+escape('Customer');
+var word8 ='role='+escape(Supplier);
 
 var the_data =word1 +'&'+ word2+'&'+ word3+'&'+ word4+'&'+ word5+'&'+ word6+'&'+ word7+'&'+ word8;
 self.xmlHttpReq.send(the_data); 
@@ -96,7 +96,7 @@ alert('Successfuly Added');
 					
 <div id="comments" class="comments-area">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Customer</h1>
+						<h1 class="entry-title">Add Supplier</h1>
 
 					    <!-- .entry-content -->
 
@@ -125,7 +125,7 @@ alert('Successfuly Added');
 <input id="email" type="email"  size="70" aria-required="true" name="email" onblur=' JavaScript:xmlhttpVPost("email1","email","Addcustomervalidate.jsp")' required placeholder="Enter the Email Address"></p><div class="val" id="email1"></div>
 
 <p class="form-submit">
-        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Add Customer"> 
+        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Add Supplier"> 
 <div id="success" style="color:green"></div>
 </p>
 
@@ -135,7 +135,7 @@ alert('Successfuly Added');
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h3>Upload Customer image </h3>
+						<h3>Upload Supplier</h3>
 
 					    <!-- .entry-content -->
 
@@ -173,3 +173,20 @@ alert('Successfuly Added');
 
 
 </body></html>
+<%-- 
+    Document   : AddSupplier
+    Created on : Aug 24, 2015, 7:07:05 AM
+    Author     : windya yasas
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>

@@ -1,3 +1,7 @@
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +12,7 @@
  *
  * @author windya yasas
  */
+import com.mysql.jdbc.Connection;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.io.*;
@@ -15,9 +20,10 @@ import java.io.*;
 public class DbConnect 
 {
      public Connection conn;
-    private Statement statement;
-    public static DbConnect db;
-    protected DbConnect() {
+     private Statement statement;
+     public static DbConnect db;
+     protected DbConnect()
+     {
         String url= "jdbc:mysql://localhost:3306/";
         String dbName = "gajanayake";
         String driver = "com.mysql.jdbc.Driver";
