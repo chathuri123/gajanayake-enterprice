@@ -99,7 +99,7 @@ alert('Successfuly Added');
              	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8 pull-left hfeed">
 									<!-- #post-39 -->
 
 					

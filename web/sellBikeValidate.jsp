@@ -1,4 +1,4 @@
-
+<html>
 <head> 
 <%@include file="DB_Connector.jsp"%>   
 </head> 
@@ -49,40 +49,46 @@ if(f.equals("MbModel"))
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("select Name from mbmodel where BrandID='"+BrandID+"'");%>
     <%="<label>Bike Model</label><br> " %>
-    <%="<select name='bmodel' id='bmodel' style='width:250px'>"%>
+    <select name='bmodel' id='bmodel' style='width:250px' onchange='JavaScript:xmlhttpVPost("Mbike","bmodel","sellBikeValidate.jsp")' >
         <% while(rs.next()) {%>
 
-        <%="<option>"+rs.getString("Name")+"</option>"%>
+        <%="<option value='"+rs.getString("Name")+"'>"+rs.getString("Name")+"</option>"%>
         
         <%}%>
     <%="</select>"%>
     
+    
 
   
 <%}
-
+if(f.equals("Mbike"))
+{
+  String modelID="";
+      Statement stmt1 = conn.createStatement();
+      ResultSet rs1 = stmt1.executeQuery("select ModelID from mbmodel where Name='"+v+"'");
+      while(rs1.next())
+      {
+         modelID = rs1.getString("ModelID");
         
-     
+      }
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("select * from motorbikes where ModelID='"+modelID+"'");%>
+    <%="<label>Engine and Chassis no</label><br> " %>
+    <%="<select name='bike' id='bike' style='width:420px'>"%>
+        <% while(rs.next()) {%>
+
+        <option value="<%=rs.getString("BikeID")%>">Engine No - <%=" "+rs.getString("EngineNo")+" | "%>Chassis No - <%=" "+rs.getString("ChasisNo")%></option>
+        
+        <%}%>
+    <%="</select>"%>
+      
+        
+<%}     
 
 
 %> 
 
 
 </body> 
-</html> <%-- 
-    Document   : sellBikeValidate
-    Created on : Aug 24, 2015, 10:14:55 AM
-    Author     : windya yasas
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
 </html>

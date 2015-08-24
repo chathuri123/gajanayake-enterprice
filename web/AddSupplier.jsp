@@ -90,7 +90,7 @@ alert('Successfuly Added');
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8 pull-left hfeed">
 									<!-- #post-39 -->
 
 					
@@ -173,20 +173,3 @@ alert('Successfuly Added');
 
 
 </body></html>
-<%-- 
-    Document   : AddSupplier
-    Created on : Aug 24, 2015, 7:07:05 AM
-    Author     : windya yasas
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>

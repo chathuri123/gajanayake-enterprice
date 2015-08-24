@@ -68,9 +68,8 @@
     </p>
     <p><div id="MbModel"></div>
     </p>
-<p><label>Select Engine and Chassis no</label> <br>
-    <select name="BEnginNo" id="BEnginNo" style="width:350px"></select>
-</p>
+    <p><div id='Mbike'></div></p>
+
 <p><label>Discount</label> <br>
     <input  onmousemove="btn()" type="number" name="Discount" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Discount"></p>
 
