@@ -9,11 +9,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
+<%@include file="DB_Connector.jsp" %>
 
 <script>
 
 </script>
-
+<script src="validateScript.js"></script>
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
 
@@ -43,7 +44,7 @@
 	
 <div id="respond" class="comment-respond">
     
-<form action="purchaseBike1.jsp" method="post"  class="comment-form" >
+<form action="sellBike1.jsp" method="post"  class="comment-form" >
 <br>							
 <p ><label>Customer </label><br>
         
@@ -51,11 +52,21 @@
 <p><a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
 </p>
 
-<p><label>Select Bike Brand</label><br>
-    <select name="BBrand" id="BBrand" style="width:150px"></select>
+ <p><label>Bike Brand</label><br>
+        <%
+             Statement stmt2 = conn.createStatement();
+             ResultSet rs2 = stmt2.executeQuery("select * from mbbrand"); %>
+ 
+             <select name="bbrand" id="bbrand" style="width:250px" onchange='JavaScript:xmlhttpVPost("MbModel","bbrand","sellBikeValidate.jsp")'>
+             <% while(rs2.next()) {%>
+
+             <option><%=rs2.getString("Bname")%></option>
+        
+               <%}%>
+             </select>
+    
     </p>
-<p><label>Select Bike Model</label><br>
-    <select name="Bmodel" id="Bmodel" style="width:150px"></select>
+    <p><div id="MbModel"></div>
     </p>
 <p><label>Select Engine and Chassis no</label> <br>
     <select name="BEnginNo" id="BEnginNo" style="width:350px"></select>
