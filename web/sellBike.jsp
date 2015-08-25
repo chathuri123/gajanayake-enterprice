@@ -59,7 +59,7 @@
  <%
             Statement stmt1 = conn.createStatement();
             ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=1 ");%>
-     <select name="Customer" id="Customer" style="width:350px" >
+     <select name="Customer" id="Customer" style="width:350px" onchange='JavaScript:xmlhttpVPost("Customer1","Customer","sellBikeValidate.jsp")' >
         <% while(rs1.next()) {%>
 
         <option>Customer ID<%=" - "+rs1.getString("userID")+" | "%> Name<%=" - "+rs1.getString("fname")+" "%></option>
@@ -101,7 +101,7 @@
 </p>
         
 <p ><label>Current Pay Amount</label> 
-<input  onmousemove="btn()" type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
+<input   type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
 <br>
 <p>Release Bike and Leave as a pending transaction</p>
 <p class="form-submit">
@@ -120,18 +120,11 @@
                                      
 
 <aside id="search-2" class="widget widget_search">
-    <div id="Servises"  class="comment-form" >
-<p><label>Leasing Company</label><br>
-    <select name="BBrand" id="BBrand" style="width:150px"></select>
-    </p>
-    <p>Least Down payment : </p>
-<p><label>No Of years</label><br>
-    <select name="BBrand" id="BBrand" style="width:150px"></select>
-    </p>
-    <p>Estimated monthly payment : </p>
-    <p class="form-submit">
-<input type="submit" class="submit" value="Submit"> 
-</p>	
+    <div   class="comment-form" style="background-color:#fffff;color:white;padding:10px;border-radius:5px;visibility:false;height:145px" ></div>
+
+    <div id="price" class="comment-form" style="background-color:#dd1557;color:white;padding:10px;border-radius:5px;visibility:false;" ></div>
+    <div id="Servises"  class="comment-form" style="background-color:#96a092;padding:10px;border-radius:5px;visibility:false;" >
+
     </div>  
 </aside>
 
