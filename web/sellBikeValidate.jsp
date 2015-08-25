@@ -10,8 +10,11 @@ String f = request.getParameter("field");
  
 
 
-if(f.equals("Customer"))
+if(f.equals("Customer1"))
 {
+    session.setAttribute("userID",v);
+    
+    
     
 }
 
@@ -94,6 +97,7 @@ if(f.equals("price"))
       String modelID="";
       double price=0;
       String modelName="";
+      session.setAttribute("BikeID",v);
       Statement stmt1 = conn.createStatement();
       ResultSet rs1 = stmt1.executeQuery("select m.Name,m.price,m.ModelID from motorbikes b,mbmodel m where m.ModelID=b.ModelID and b.BikeID='"+v+"'");
       
@@ -125,10 +129,12 @@ if(f.equals("discount1"))
 {
   
      double price =Double.parseDouble(session.getAttribute("price").toString());
+     
     double dis=0;
     dis=Double.parseDouble(v);
     price=price-(price * dis/100);
     session.setAttribute("price",price);
+    session.setAttribute("discount",dis);
       %><%="<b>New price = Rs "+price+"</b>"%><%
 }
 if(v.equals("Leasing"))
@@ -182,7 +188,7 @@ if(f.equals("instalment"))
        }
       
          price=price+(price*rate/100);
-         session.setAttribute("price",price);
+         session.setAttribute("leasep",price);
          downPayment=price*rdownPayment/100;
          session.setAttribute("downPayment",downPayment);
          
@@ -209,24 +215,28 @@ if(f.equals("Dpayval"))
 {
     double downPayment=Double.parseDouble(session.getAttribute("downPayment").toString());
     double cusDpay=Double.parseDouble(v);
+    double cusDpay1=0;
+    
     if (cusDpay<downPayment)
     {
         %><%="<p style='color:red'>Insufficient down payment<p>"%><%
     }
     else
     {
-        %><%="<p style='color:green'>--<p>"%><%
+        cusDpay1=cusDpay;
+        %><%=%><%
     }
+    session.setAttribute("payment",cusDpay1);
     
 }
 if(f.equals("lyears1"))
 {
-    double downPayment=Double.parseDouble(session.getAttribute("downPayment").toString());
+    double downPayment=Double.parseDouble(session.getAttribute("cusDpay").toString());
     String lPlanID=session.getAttribute("lPlanID").toString();
     int years=Integer.parseInt(v);
     int maxYears=0;
     double monthlyPay=0;
-    double price=Double.parseDouble(session.getAttribute("price").toString());
+    double price=Double.parseDouble(session.getAttribute("leasep").toString());
     Statement stmt = conn.createStatement();
      ResultSet rs = stmt.executeQuery("select * from leasingplans where PlanID='"+lPlanID+"' ");
         while(rs.next()) {
@@ -273,6 +283,7 @@ if(v.equals("Cash"))
 
 </p>	
 <%}
+
 %> 
 
 

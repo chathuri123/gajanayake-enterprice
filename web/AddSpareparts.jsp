@@ -170,7 +170,7 @@ alert('Successfuly Added');
     <p><div id="MbModel"></div>
     </p>
 <p ><label>Name</label> 
-<input   type="text" name="Name" size="70" aria-required="true" id="Name" required placeholder="Enter the Model number"></p>
+<input   type="text" name="Name" size="70" aria-required="true" id="Name"  required placeholder="Enter the Model number"></p>
 
 <p ><label>Model Number</label> 
 <input   type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>

@@ -12,8 +12,61 @@
 <%@include file="DB_Connector.jsp" %>
 
 <script>
+   
+function xmlhttpPost(field)
+{ 
+var xmlHttpReq = false; 
+var self = this; 
+
+// Mozilla/Safari 
+if (window.XMLHttpRequest) { 
+self.xmlHttpReq = new XMLHttpRequest(); 
+} 
+// IE 
+else if (window.ActiveXObject) { 
+self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
+} 
+self.xmlHttpReq.open('POST', "sellBike1.jsp", false); 
+self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
+self.xmlHttpReq.onreadystatechange = function()
+{
+    
+    if (self.xmlHttpReq.readyState != 4 && self.xmlHttpReq.status == 200)
+ {
+     document.getElementById(field).innerHTML = "Validating..";
+ }
+  else if (self.xmlHttpReq.readyState == 4)
+  { 
+     updatepage(field,self.xmlHttpReq.responseText); 
+  } 
+}
+var word1 ='field='+ escape(field);
+
+
+
+
+var the_data =word1;
+self.xmlHttpReq.send(the_data); 
+
+
+
+
+
+}
+
+
+
+
+function updatepage(field,str){ 
+document.getElementById(field).innerHTML = str;
+alert('Successfuly Added');
+
+
+} 
 
 </script>
+
+
 <script src="validateScript.js"></script>
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
@@ -29,7 +82,7 @@
 			</div>
 
 		</header>
-
+<form class="comment-form" >	
 		<main>
                      <br>  
 	<div class="container">
@@ -47,22 +100,20 @@
 	
 	
 <div id="respond" class="comment-respond">
-     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+     <article  class="post-39 page type-page status-publish hentry xfolkentry">
 						<h1 class="entry-title">Sell Bike </h1>
 
     </article>
-    
-<form action="sellBike1.jsp" method="post"  class="comment-form" >							
+    							
 <p ><label>Customer </label><br>
         
-<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Customer Using NIC/ID/Name"></p>
  <%
             Statement stmt1 = conn.createStatement();
             ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=1 ");%>
      <select name="Customer" id="Customer" style="width:350px" onchange='JavaScript:xmlhttpVPost("Customer1","Customer","sellBikeValidate.jsp")' >
         <% while(rs1.next()) {%>
 
-        <option>Customer ID<%=" - "+rs1.getString("userID")+" | "%> Name<%=" - "+rs1.getString("fname")+" "%></option>
+        <option value="<%=rs1.getString("userID")%>">Customer ID<%=" - "+rs1.getString("userID")+" | "%> Name<%=" - "+rs1.getString("fname")+" "%></option>
         
         <%}%> 
     
@@ -70,6 +121,7 @@
     
 <a href="AddCustomer.jsp" style="padding:10px">Add customer</a>
 </p>
+<div id="Customer1"></div>
 
  <p><label>Bike Brand</label><br>
         <%
@@ -89,10 +141,7 @@
     </p>
     <p><div id='Mbike'></div></p>
 
-<!--<p><label>Discount</label> <br>
-    <input  onmousemove="btn()" type="number" name="Discount" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Discount"></p>
 
-</p>-->
 <p><label>Select Payment type</label> <br>
     <select name="Ptype" id="Ptype" style="width:150px" onchange='JavaScript:xmlhttpVPost("Servises","Ptype","sellBikeValidate.jsp")' >
         <option value="Leasing">Leasing</option>
@@ -100,21 +149,17 @@
     </select>
 </p>
         
-<p ><label>Current Pay Amount</label> 
-<input   type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
 <br>
 <p>Release Bike and Leave as a pending transaction</p>
 <p class="form-submit">
-<input type="submit" class="submit" value="Release"> 
+<input type="submit" class="submit" onclick='JavaScript:xmlhttpPost("release")' value="Release"> 
 </p>					
-</form>
         
                 
                 
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
-             
-
+            
 			
 				<div id="secondary" class="col-md-4" >
                                      
@@ -132,6 +177,8 @@
 	</div>
 
 	</main><!-- main -->
+        </form>
+
         <%@include file="footer.jsp" %>
 </div><!-- #page -->
 
