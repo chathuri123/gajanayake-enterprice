@@ -64,10 +64,7 @@ alert('Successfuly Added');
 
 
 } 
-function noti()
-{
-    alert("Successfuly Added");
-}
+
 
 </script>
 

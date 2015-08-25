@@ -43,26 +43,32 @@
       //Increament ID    
       Statement stmt1 = conn.createStatement();
       int id=0;
+      String url="AddCustomer.jsp";
       String RID="";
       if (role.equals("Customer"))
       {
           RID="CS";
+          url="AddCustomer.jsp";
       }
       else if(role.equals("Supplier"))
       {
-         RID="SU"; 
+         RID="SU";
+         url="AddSupplier.jsp";
       }
       else if(role.equals("Employee"))
       {
-         RID="EM"; 
+         RID="EM";
+         url="AddEmployee.jsp";
       }
       else if(role.equals("Administrator"))
       {
-         RID="AD"; 
+         RID="AD";
+         url="AddEmployee.jsp";
       }
       else if(role.equals("DataEntryOperator"))
       {
-         RID="DE"; 
+         RID="DE";
+         url="AddEmployee.jsp";
       }
       
       String userC="CS";
@@ -104,7 +110,9 @@
              
              String sql="INSERT INTO `gajanayake`.`user`(`userID`,`fname`,`BDay`,`tel`,`Address`,`lname`,`password`,`Email`,`NIC`,`nameWithIni`,`salary`,`AccBalance`,`"+role+"`,`username`) VALUES('"+userID+"','"+fname+"','"+BDay+"','"+tel+"','"+Address+"','"+lname+"','"+password+"','"+email+"','"+nic+"','"+nameWithIni+"','"+salary+"','"+accBalance+"','1','"+username+"')";
              stat.executeUpdate(sql);
-             %><%="Successfuly Added"%><%
+             
+              response.sendRedirect(url);
+             session.setAttribute("noti","yes");
              
              
           

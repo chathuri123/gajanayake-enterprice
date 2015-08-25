@@ -69,9 +69,16 @@ alert('Successfuly Added');
 </script>
 
 </head>
-<body class="page page-id-39 page-template-default no-fittext basic">
-
-	<div id="page">
+<% if(session.getAttribute("noti").toString()== "yes")
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
+}
+else
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic'>"%><% 
+}
+session.setAttribute("noti","No");
+%>	<div id="page">
 
 		<header id="header">
 			<%@include file="header.jsp" %>

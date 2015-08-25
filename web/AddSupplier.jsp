@@ -69,8 +69,16 @@ alert('Successfuly Added');
 </script>
 
 </head>
-<body class="page page-id-39 page-template-default no-fittext basic">
-
+<% if(session.getAttribute("noti").toString()== "yes")
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
+}
+else
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic'>"%><% 
+}
+session.setAttribute("noti","No");
+%>
 	<div id="page">
 
 		<header id="header">
@@ -82,7 +90,7 @@ alert('Successfuly Added');
 			</div>
 
 		</header>
-<form    class="comment-form" >
+<form method="POST"    class="comment-form" action="Addcustomer1.jsp?role=Supplier">
 
 		<main>
                     
@@ -125,7 +133,7 @@ alert('Successfuly Added');
 <input id="email" type="email"  size="70" aria-required="true" name="email" onblur=' JavaScript:xmlhttpVPost("email1","email","Addcustomervalidate.jsp")' required placeholder="Enter the Email Address"></p><div class="val" id="email1"></div>
 
 <p class="form-submit">
-        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Add Supplier"> 
+        <input type="submit"  class="submit"  value="Add Supplier"> 
 <div id="success" style="color:green"></div>
 </p>
 

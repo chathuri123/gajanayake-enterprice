@@ -1,3 +1,8 @@
+function noti()
+{
+    alert("Successfuly Added");
+}
+
 function xmlhttpVPost(field,value,file)
 { 
 var xmlHttpReq = false; 
