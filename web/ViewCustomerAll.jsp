@@ -1,9 +1,8 @@
 <%-- 
-    Document   : ViewSpareParts
-    Created on : 04-Jul-2015, 01:25:22
-    Author     : chathuri lakmini
+    Document   : ViewCustomers
+    Created on : Jul 28, 2015, 6:21:59 AM
+    Author     : windya yasas
 --%>
-
 
 <%@page import="javax.servlet.*"%>
 <%@page import="javax.servlet.http.*"%>
@@ -53,50 +52,40 @@
 
 <br>
 
-<form action="ViewSpareParts.jsp" method="post"  class="comment-form">
-    
-<p ><label>Item Name</label> 
-<input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search By Name"></p>
-</form>
+
 <%  
 
- String Iname=request.getParameter("iname");
+ String userid=request.getParameter("userid");
  
- Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from spareparts where Name LIKE '%"+Iname+"%'");
+ Statement stmt1 =conn.createStatement();
+ ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=1");
 %>
 
-<%
- //Statement stmt1 = conn.createStatement();
- //ResultSet rs1 = stmt1.executeQuery("select * from spareparts");%>
+ 
  
  <br>
+ 
  <table border="1" align="left" width="600">
 
   <tr>
-    <td>Spare Part ID</td>
-    <td>Name</td>
-    <td>Sub Category</td>
-    <td>Shell Number</td>
-    <td>Purchase Rate</td>
-    <td>Sales Rate</td>
-    <td>Quantity</td>
-   
+    <td>Customer ID</td>
+    <td>First name</td>
+    <td>Last name</td>
+    <td>Email</td>
+    <td>Address</td>
+    <td>NIC No</td>
+    
 
   </tr>
-   <% while(rs.next()) {%>
+   <% while(rs1.next()) {%>
   <tr>
-    <td><%=rs.getString("SparePartID")%></td>
-    <td><%=rs.getString("name")%></td>
-    <td><%=rs.getString("SubCategory")%></td>
-    <td><%=rs.getString("ShellNo")%></td>
-    <td><%=rs.getString("PurchasePrice")%></td>
-    <td><%=rs.getString("SalePrice")%></td>
-    <td><%=rs.getString("Quantity")%></td>
-    
-  
-    <td><a href="ViewSpareParts1.jsp?spID=<%=rs.getString("SparePartID")%>">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>">Remove</a>
+    <td><%=rs1.getString("userID")%></td>
+    <td><%=rs1.getString("fname") %></td>
+    <td><%=rs1.getString("lname") %></td>
+    <td><%=rs1.getString("Email") %></td>
+    <td><%=rs1.getString("Address") %></td>
+    <td><%=rs1.getString("NIC") %></td>
+
    
   </tr>
  <%}%>
@@ -110,7 +99,7 @@
 			
 				<div id="secondary" class="col-md-4" >
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">View Product Details</h1>
+						<h1 class="entry-title">View Customer Details</h1>
 
 					    <!-- .entry-content -->
 
@@ -118,10 +107,10 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
-<div id="upload-area">
+    <div id="upload-area">
    
 	<div id="preview" style="padding:10px">
-		<img width="400px" height="400px" src="Images/Pisston.jpg" id="thumb">
+		<img width="400px" height="400px" src="Images/User.jpg" id="thumb">
 	</div>
 
 	
@@ -140,3 +129,4 @@
 
 
 </body></html>
+

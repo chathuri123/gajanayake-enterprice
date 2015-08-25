@@ -4,7 +4,7 @@
     Author     : windya yasas
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 
@@ -44,7 +44,7 @@ var word4 ='Address='+ escape( document.getElementById('Address').value);
 var word5 ='BDay='+ escape( document.getElementById('BDay').value);
 var word6 ='tel='+ escape( document.getElementById('tel').value);
 var word7 ='email='+ escape( document.getElementById('email').value);
-var word8 ='role='+escape('Customer');
+var word8 ='role='+escape(document.getElementById('role').value);
 
 var the_data =word1 +'&'+ word2+'&'+ word3+'&'+ word4+'&'+ word5+'&'+ word6+'&'+ word7+'&'+ word8;
 self.xmlHttpReq.send(the_data); 
@@ -82,7 +82,7 @@ alert('Successfuly Added');
 			</div>
 
 		</header>
-<form method="POST"    class="comment-form" action="Addcustomer1.jsp?role=Customer">
+<form    class="comment-form" >
 
 		<main>
                     
@@ -96,7 +96,7 @@ alert('Successfuly Added');
 					
 <div id="comments" class="comments-area">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Customer</h1>
+						<h1 class="entry-title">Add Employee</h1>
 
 					    <!-- .entry-content -->
 
@@ -112,11 +112,26 @@ alert('Successfuly Added');
 <input  type="name" id="fname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpVPost("fname1","fname","Addcustomervalidate.jsp")' name="fname" required placeholder="Enter the First name"><div class="val" id="fname1"></div></p>
 <p ><label for="author">Last Name </label> 
     <input  type="name" id="lname"  size="70" aria-required="true" onblur='JavaScript:xmlhttpVPost("lname1","lname","Addcustomervalidate.jsp")' name="lname" required placeholder="Enter the  Last name"><div class="val" id="lname1"></div></p>
+ <p><label>Role</label><br>
+        
+ 
+             <select name="role" id="role" style="width:250px">
+            
 
+             <option value="Employee">Worker</option>
+             <option value="DataEntryOperator">Data Entry Operator</option>
+             <option value="Administrator">Administrator</option>
+             
+             
+        
+              
+             </select>
+    
+    </p>
 <p ><label for="author">NIC no</label> 
 <input id="nic" type="name"  size="70" aria-required="true" name="nic" onblur=' JavaScript:xmlhttpVPost("nic1","nic","Addcustomervalidate.jsp")' required placeholder="Enter the NIC no"><div class="val" id="nic1"></div></p>
 <p ><label for="author">Address </label> 
- <textarea rows="4" aria-required="true" name="Address" id="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"></textarea></p><div class="val" id="Address1"></div></p>
+<textarea rows="4" aria-required="true" name="Address" id="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"></textarea></p><div class="val" id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
 <input   type="date"  size="70" aria-required="true" id="BDay" name="BDay" required placeholder="Enter the DoB"></p>
 <p><label for="author">Phone no</label> 
@@ -125,8 +140,7 @@ alert('Successfuly Added');
 <input id="email" type="email"  size="70" aria-required="true" name="email" onblur=' JavaScript:xmlhttpVPost("email1","email","Addcustomervalidate.jsp")' required placeholder="Enter the Email Address"></p><div class="val" id="email1"></div>
 
 <p class="form-submit">
-        <input type="submit"  class="submit"  value="Add Customer"> 
-       <!-- onclick='JavaScript:xmlhttpPost("success")'-->
+        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Add Employee"> 
 <div id="success" style="color:green"></div>
 </p>
 
@@ -136,7 +150,7 @@ alert('Successfuly Added');
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h3>Upload Customer image </h3>
+						<h3>Upload Employee image </h3>
 
 					    <!-- .entry-content -->
 

@@ -1,4 +1,5 @@
-function xmlhttpPost(field,value) { 
+function xmlhttpVPost(field,value,file)
+{ 
 var xmlHttpReq = false; 
 var self = this; 
 
@@ -10,7 +11,7 @@ self.xmlHttpReq = new XMLHttpRequest();
 else if (window.ActiveXObject) { 
 self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
 } 
-self.xmlHttpReq.open('POST', "Addcustomervalidate.jsp", false); 
+self.xmlHttpReq.open('POST',file, false); 
 self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
 self.xmlHttpReq.onreadystatechange = function()
 {
@@ -20,7 +21,7 @@ self.xmlHttpReq.onreadystatechange = function()
  }
   else if (self.xmlHttpReq.readyState == 4)
   { 
-     updatepage(field,self.xmlHttpReq.responseText); 
+     updatepageV(field,self.xmlHttpReq.responseText); 
   } 
 }
 var word = getquerystring(value);
@@ -48,7 +49,7 @@ return word;
 } 
 
 
-function updatepage(field,str){ 
+function updatepageV(field,str){ 
 document.getElementById(field).innerHTML = str; 
 
 } 

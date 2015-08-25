@@ -52,16 +52,22 @@
 
 <br>
 
-<form action="ViewSpareParts1.jsp" method="post"  class="comment-form">
+<form action="ViewCustomers.jsp" method="post"  class="comment-form">
 <p ><label>Customer</label> 
-<input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search by cutomer Name/ID/Nic"></p>
+<input  type="text" name="userid" onchange="btn()"  size="70" aria-required="true" id="userid" required placeholder="Search by cutomer ID"></p>
 </form>
+<%  
 
- <%
- Statement stmt = conn.createStatement();
- ResultSet rs = stmt.executeQuery("select * from user where LEFT(userID , 2) = 'EM'");%>
+ String userid=request.getParameter("userid");
+ 
+ Statement stmt1 = conn.createStatement();
+ ResultSet rs1 = stmt1.executeQuery("select * from user where userID LIKE '%"+userid+"%'");
+%>
+
+ 
  
  <br>
+ 
  <table border="1" align="left" width="600">
 
   <tr>
@@ -70,22 +76,22 @@
     <td>Last name</td>
     <td>Email</td>
     <td>Address</td>
-    <td>NIC no</td>
-    <td></td>
-    <td></td>
-    
+    <td>NIC No</td>
+   
 
   </tr>
-   <% while(rs.next()) {%>
+   <% while(rs1.next()) {%>
   <tr>
-    <td><%=rs.getString("userID")%></td>
-    <td><%=rs.getString("fname") %></td>
-    <td><%=rs.getString("lname") %></td>
-    <td><%=rs.getString("Email") %></td>
-    <td><%=rs.getString("Address") %></td>
-    <td><%=rs.getString("NIC") %></td>
-    <td><a href="">View/edit</a><td>
-    <td><a href="">Remove</a><td>
+    <td><%=rs1.getString("userID")%></td>
+    <td><%=rs1.getString("fname") %></td>
+    <td><%=rs1.getString("lname") %></td>
+    <td><%=rs1.getString("Email") %></td>
+    <td><%=rs1.getString("Address") %></td>
+    <td><%=rs1.getString("NIC") %></td>
+    
+    <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
+    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>">Remove</a>
+   
    
   </tr>
  <%}%>

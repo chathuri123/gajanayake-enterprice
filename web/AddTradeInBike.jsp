@@ -35,11 +35,12 @@
 		</header>
 
 		<main>
+                    <form action="AddTradein1.php" method="post"  class="comment-form" >
                     <br>
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8 pull-left hfeed">
 									<!-- #post-39 -->
 
 					
@@ -102,7 +103,7 @@
 <p class="form-submit">
 <input type="submit" class="submit" value="Send for Admin Approval"> 
 </p>					
-</form>
+
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
@@ -124,20 +125,20 @@
 		<img width="400px" height="400px" src="Images/doc.jpg" id="thumb">
 	</div>
 
-	<form action="/playground/ajax_upload" id="newHotnessForm">
+	
 		
                 <p><input type="file" size="20" id="imageUpload" ></p>
                 <p class="form-submit">
 		<button  type="submit">Upload</button>
                 </p>
-	</form>
+	
 </div>
 
 </aside>
 
 </div><!-- #secondary.widget-area -->		</div>
 	</div>
-
+</form>
 	</main><!-- main -->
         <%@include file="footer.jsp" %>
 </div><!-- #page -->

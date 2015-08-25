@@ -9,7 +9,7 @@
 <%@include file="content.jsp" %>
 
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	var thumb = $('#thumb');	
 
@@ -27,7 +27,55 @@ $(document).ready(function(){
 			thumb.attr('src', response);
 		}
 	});
-});
+})*/
+<script src="validateScript.js"></script>
+<script>
+function xmlhttpPost(field)
+{ 
+var xmlHttpReq = false; 
+var self = this; 
+
+// Mozilla/Safari 
+if (window.XMLHttpRequest) { 
+self.xmlHttpReq = new XMLHttpRequest(); 
+} 
+// IE 
+else if (window.ActiveXObject) { 
+self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
+} 
+self.xmlHttpReq.open('POST', "AddBikeBrand1.jsp", false); 
+self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
+self.xmlHttpReq.onreadystatechange = function()
+{
+    
+    if (self.xmlHttpReq.readyState != 4 && self.xmlHttpReq.status == 200)
+ {
+     document.getElementById(field).innerHTML = "Validating..";
+ }
+  else if (self.xmlHttpReq.readyState == 4)
+  { 
+     updatepage(field,self.xmlHttpReq.responseText); 
+  } 
+}
+var word1 ='Bname='+ escape( document.getElementById('Bname').value);
+var word2 ='regno='+ escape( document.getElementById('regno').value);
+var word3 ='description='+ escape( document.getElementById('description').value);
+
+
+var the_data =word1 +'&'+ word2+'&'+ word3;
+self.xmlHttpReq.send(the_data); 
+*/
+
+
+
+
+}
+function updatepage(field,str){ 
+document.getElementById(field).innerHTML = str;
+alert('Successfuly Added');
+
+
+} 
 
 </script>
 
@@ -66,17 +114,22 @@ $(document).ready(function(){
 					</article>	
 	
 <div id="respond" class="comment-respond">
-<form action="AddCourse1.php" method="post"  class="comment-form" >
+    
+    <form action="AddBikeBrand1.jsp" class="comment-form" >
 
 							
 <p ><label>Brand Name </label> 
-<input  type="name" id="Bname"  onchange="btn()"  size="70" aria-required="true" name="Bname" required placeholder="Enter the brand name"></p>
+<input  type="text" id="Bname" size="70" aria-required="true" name="Bname" required placeholder="Enter the brand name"></p>
+<p ><label>Registered Number</label> 
+<input  type="text" id="regno" size="70" aria-required="true" name="regno" required placeholder="Enter the Registered Number"></p>
 <p ><label>Description </label> 
-    <textarea  type="name" id="Bname"  onchange="btn()"  size="70" aria-required="true" name="Bname" required placeholder="Enter the Description"></textarea></p>
+    <textarea id="description" size="70" aria-required="true" name="description" required placeholder="Enter the Description"></textarea></p>
 
-<p class="form-submit">
-<input type="submit" class="submit" value="Add bikebrand"> 
-</p>					
+ <p class="form-submit">
+        <input type="submit" class="submit"  value="Add"> 
+
+ </p>  
+					
 </form>
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
@@ -99,13 +152,13 @@ $(document).ready(function(){
 		<img width="400px" height="400px" src="Images/suzukilogo.jpg" id="thumb">
 	</div>
 
-	<form action="/playground/ajax_upload" id="newHotnessForm">
+	
 		
                 <p><input type="file" size="20" id="imageUpload" ></p>
                 <p class="form-submit">
 		<button  type="submit">Upload Brand Logo</button>
                 </p>
-	</form>
+	
 </div>
 </aside>
 

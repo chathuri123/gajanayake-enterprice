@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 <script type="text/javascript" src="bike/jquery.min.js"></script>
+<% session.setAttribute("noti","no");%>
 </head>
 <body class="home blog only-on-home no-fittext basic">
 
@@ -42,17 +43,17 @@
 			<div class="container">
 				<div class="row">
 					<aside id="bavotasan_custom_text_widget-5" class="home-widget col-md-3 bavotasan_custom_text_widget">
-                                            <a href="purchaseBike.jsp"><i class="info fa fa-folder-open"></i></a>
-                                            <h3 class="home-widget-title"><a href="purchaseBike.jsp">Purchase a Bike<br></br></a></h3>
+                                            <a href="sellBike.jsp"><i class="info fa fa-folder-open"></i></a>
+                                            <h3 class="home-widget-title"><a href="sellBike.jsp">Sell a Bike<br></br></a></h3>
 		<div class="textwidget">
 				</div>
-		<a href="purchaseBike.jsp" class="btn btn-info btn-lg">Enter</a></aside>
-                <aside id="bavotasan_custom_text_widget-6" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="PurchaseSpareP.jsp">
+		<a href="sellBike.jsp" class="btn btn-info btn-lg">Enter</a></aside>
+                <aside id="bavotasan_custom_text_widget-6" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="SellSpareparts.jsp">
                         <i class="success fa fa-pied-piper-alt"></i></a><h3 class="home-widget-title">
-                            <a href="PurchaseSpareP.jsp">Purchase Spare Parts<br></br></a></h3>
+                            <a href="SellSpareparts.jsp">Sell Spare Parts<br></br></a></h3>
 		<div class="textwidget">
 				</div>
-		<a href="PurchaseSpareP.jsp" class="btn btn-success btn-lg">Enter</a></aside>
+		<a href="SellSpareparts.jsp" class="btn btn-success btn-lg">Enter</a></aside>
                 <aside id="bavotasan_custom_text_widget-7" class="home-widget col-md-3 bavotasan_custom_text_widget"><a href="">
                         <i class="warning fa fa-user"></i></a>
                     <h3 class="home-widget-title"><a href="">View Accounts<br></br></a></h3>

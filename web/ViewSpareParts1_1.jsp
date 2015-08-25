@@ -41,7 +41,7 @@ self.xmlHttpReq.onreadystatechange = function()
      updatepage(field,self.xmlHttpReq.responseText); 
   } 
 }
-var word1 ='SubCat='+ escape( document.getElementById('SubCat').value);
+var word1 ='subcat='+ escape( document.getElementById('subcat').value);
 var word2 ='supplier='+ escape( document.getElementById('supplier').value);
 //var word3 ='bmodel='+ escape( document.getElementById('bmodel').value);--co
 var word4 ='Name='+ escape( document.getElementById('Name').value);  
@@ -128,7 +128,10 @@ alert('Successfuly Added');
  ResultSet rs = stmt.executeQuery("select * from spareparts where SparePartID='"+ID+"'");
  while(rs.next()) {%>
  
- <%String catId=rs.getString("SubCategory");
+ <%
+   String catId=rs.getString("SubCategory");
+   out.println(catId);
+   
    String spareid=rs.getString("SparePartID");
  
  %>
@@ -145,22 +148,27 @@ alert('Successfuly Added');
     <%
         Statement stmt1 = conn.createStatement();
         
-        ResultSet rs1 = stmt1.executeQuery("select SubCatName from subcategory where SubCatID='"+catId+"'");%>
+        ResultSet rs1 = stmt1.executeQuery("select * from subcategory where SubCatID='"+catId+"'");%>
  
-        <p>      
-        <select name="SubCat" id="SubCat" style="width:250px">
+        <p>   
+            
+        <select name="subcat" id="subcat" style="width:250px">
+            
         <% while(rs1.next()) {%>
 
-        <option value="<%=rs1.getString("SubCatName")%>"><%=rs1.getString("SubCatName")%></option>
-         <%}%>
-      <% 
+        <option value="<%=rs1.getString("SubCatID")%>"><%=rs1.getString("SubCatName")%></option>
+        
+        <%}%>
+        
+        
+        <% 
         Statement stmt2 = conn.createStatement();
-        ResultSet rs2 = stmt2.executeQuery("select SubCatName from subcategory" );%>
+        ResultSet rs2 = stmt2.executeQuery("select * from subcategory" );%>
    
     
         <% while(rs2.next()) {%>
 
-        <%="<option value='"+rs2.getString("SubCatName")+"'>"+rs2.getString("SubCatName")+"</option>"%>
+        <option value="<%=rs2.getString("SubCatID")%>"><%=rs2.getString("SubCatName")%></option>
         
         <%}%>
     
@@ -184,11 +192,11 @@ alert('Successfuly Added');
         <%}%> 
         <% 
            Statement stmt7=conn.createStatement();
-           ResultSet rs7=stmt7.executeQuery("Select namewithIni from user where supplier=1");
+           ResultSet rs7=stmt7.executeQuery("Select * from user where supplier=1");
         %>
         <% while(rs7.next())
         {%>
-        <%="<option value='"+rs7.getString("nameWithIni")+"'>"+rs7.getString("nameWithIni")+"</option>"%>
+         <option value="<%=rs7.getString("userID")%>"><%=rs7.getString("nameWithIni")%></option>"%>
         
         <%}%>
     
@@ -200,7 +208,7 @@ alert('Successfuly Added');
          <%
              Statement stmt5 = conn.createStatement();
            
-             ResultSet rs5 = stmt5.executeQuery("select m.Name from mbmodel m,spareparts s where s.BModelID=m.ModelID AND s.SparePartID='"+spareid+"'");
+             ResultSet rs5 = stmt5.executeQuery("select * from mbmodel m,spareparts s where s.BModelID=m.ModelID AND s.SparePartID='"+spareid+"'");
              
          %>
 <p>
@@ -214,12 +222,12 @@ alert('Successfuly Added');
              <%}%>
              <% 
                 Statement stmt6 = conn.createStatement();
-                ResultSet rs6 = stmt6.executeQuery("select Name from mbmodel" );%>
+                ResultSet rs6 = stmt6.executeQuery("select * from mbmodel" );%>
    
     
                 <% while(rs6.next()) {%>
 
-                <%="<option value='"+rs6.getString("Name")+"'>"+rs6.getString("Name")+"</option>"%>
+                <option value="<%=rs6.getString("ModelID")%>"><%=rs6.getString("Name")%></option>"%>
         
                 <%}%>
     

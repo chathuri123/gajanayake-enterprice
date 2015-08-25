@@ -64,6 +64,13 @@ if(f.equals("nic1"))
         
      
 }
+if(f.equals("lname1"))
+{
+    if(v.isEmpty())
+    {
+    %><%=emp%><%
+    }
+}
 
 %> 
 

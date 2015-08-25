@@ -1,6 +1,6 @@
 <%--
 ..................
-    Document   : AddSpareparts
+    Document   : SellSpareparts
     Created on : Jun 30, 2015, 5:46:57 PM
     Author     : Chathuri Lakmini 
 --%>
@@ -12,7 +12,6 @@
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 <%@include file="DB_Connector.jsp"%>    
-
 <script src="validateScript.js"></script>
 <script>
 function xmlhttpPost(field)
@@ -77,6 +76,7 @@ alert('Successfuly Added');
 
 </script>
 
+
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
 
@@ -91,8 +91,6 @@ alert('Successfuly Added');
 			</div>
 
 		</header>
-<form     class="comment-form" >
-   
 
 		<main>
                     <br>       
@@ -105,7 +103,7 @@ alert('Successfuly Added');
 					
 <div id="comments" class="comments-area">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Spare Parts </h1>
+						<h1 class="entry-title">Sell Spare Parts </h1>
 
 					    <!-- .entry-content -->
 
@@ -115,10 +113,10 @@ alert('Successfuly Added');
 	
 <div id="respond" class="comment-respond">
     
-
+<form action="AddSpareParts1.jsp" method="post"  class="comment-form" >
 <br>							
 <p ><label>Category</label> <br>
-    <%
+  <%
  Statement stmt = conn.createStatement();
  ResultSet rs = stmt.executeQuery("select CatName from category");%>
  
@@ -135,13 +133,13 @@ alert('Successfuly Added');
 
 <p>
 <div id="subcat"></div>
-    </p>
+</p>
     
-    <p><label>Supplier</label><br>
+<p><label>Customer</label><br>
          <%
             Statement stmt1 = conn.createStatement();
-            ResultSet rs1 = stmt1.executeQuery("select * from user where supplier=true ");%>
-       <select name="supplier" id="supplier" style="width:250px" >
+            ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=true ");%>
+     <select name="supplier" id="supplier" style="width:250px" >
         <% while(rs1.next()) {%>
 
         <option><%=rs1.getString("nameWithIni")%></option>
@@ -150,10 +148,10 @@ alert('Successfuly Added');
     
     </select>
     
-        <a href="AddSuplier.jsp">Add Supplier</a>
-    </p>
-    
-    <p><label>Bike Brand</label><br>
+        <a href="AddCustomer.jsp">Add Customer</a>
+</p>
+  
+<p><label>Bike Brand</label><br>
         <%
              Statement stmt2 = conn.createStatement();
              ResultSet rs2 = stmt2.executeQuery("select * from mbbrand"); %>
@@ -161,50 +159,66 @@ alert('Successfuly Added');
              <select name="bbrand" id="bbrand" style="width:250px" onchange='JavaScript:xmlhttpVPost("MbModel","bbrand","AddSparePartsValidate.jsp")'>
              <% while(rs2.next()) {%>
 
-             <option value="<%=rs2.getString("BrandID")%>"><%=rs2.getString("Bname")%></option>
+             <option><%=rs2.getString("Bname")%></option>
         
-             <%}%>
+               <%}%>
              </select>
     
     </p>
     <p><div id="MbModel"></div>
-    </p>
-<p ><label>Name</label> 
-<input   type="text" name="Name" size="70" aria-required="true" id="Name" required placeholder="Enter the Model number"></p>
+</p>
 
 <p ><label>Model Number</label> 
-<input   type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>
+    <%
+             
+             String name=request.getParameter("SubCategory");
+             out.println(name);
+             
+             Statement stmt3 = conn.createStatement();
+             ResultSet rs3 = stmt3.executeQuery("select ModelID from spareparts");
+            
+             while(rs3.next())
+             {%>
+                 
+             <%=rs3.getString("ModelID")%>
+                 
+             <%}%>
 
-<p ><label>Shell Number</label> 
-<input   type="text" name="shellNo" size="70" aria-required="true" id="shellNo" required placeholder="Enter the shell number"></p>
+             
+            
+<p ><label>Shell Number</label>
+    <%
+              
+    %>
+
 
 <p><label>Quantity</label> 
-<input  type="number" size="70" aria-required="true" name="qty" id="qty" required placeholder="Enter the Quantity"></p>
-
+<input  type="number"  size="70" aria-required="true" name="qty" id="qty" required placeholder="Enter the Quantity"></p>
 
 <p><label>Description</label> 
     <textarea rows="4" aria-required="true" name="descrip" id="descrip" required placeholder="Enter the Desription"></textarea></p>
 <br>
- <p class="form-submit">
-        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Add"> 
 
-       </p>     					
-       
-   </div><!-- #respond -->
-  </div><!-- #comments .comments-area -->
- </div>
+<p class="form-submit">
+<input type="submit" class="submit" value="Add"> 
+</p>					
+</form>
+        
+                
+                
+							</div><!-- #respond -->
+			</div><!-- #comments .comments-area -->			</div>
 			
-<div id="secondary" class="col-md-4" >
+				<div id="secondary" class="col-md-4" >
 
 						
                                                 
 
 					    <!-- .entry-content -->
-                                          
-                                            
-<aside id="search-2" class="widget widget_search">
-    <h3 >Upload Spare Part Image  </h3>
-                                            <hr> 
+                                            <br>
+                                            <br>
+                                            <br>
+
 <div id="upload-area">
    
 	<div id="preview" style="padding:10px">
@@ -212,43 +226,33 @@ alert('Successfuly Added');
 	</div>
 
 	
-		
-                <p><input type="file" size="20" id="imageUpload" ></p>
-                <p class="form-submit">
-		<button  type="submit">Upload</button>
-                </p>
 
-    <p style="color: red">Optional * </p>
-    <hr>
-</div>
-</aside>
-<aside id="search-2" class="widget widget_search">
-              <h3 >Price and Cost </h3>
-               <hr> 
-<div  class="comment-form" >
+                                            <aside id="search-2" class="widget widget_search">
+                                             <h3 >Price and Cost </h3>
+                                            <hr> 
+<form action="AddInsurancePlans1.php" method="post"  class="comment-form" >
         
-<p ><label for="author">Sales Price</label> 
-<input  type="number" id="sprice"    size="70" aria-required="true" name="sprice" required placeholder="Enter the Sales Price"></p>
+<p><label for="author">Regular Price </label> 
 
-<p ><label for="author">Purchase Price</label> 
-<input  type="number" id="pprice"    size="70" aria-required="true" name="pprice" required placeholder="Enter the Purchase Price"></p>
-
-<p ><label for="author">Average Unit Cost </label> 
-<input  type="number" id="unitcost"    size="70" aria-required="true" name="unitcost" required placeholder="Enter Average Unit cost"></p>
-</aside>
-                                       
-                                            
-</div>
-               <div id="success"></div>
-
-</div><!-- #secondary.widget-area -->
-                </div>
+<p ><label for="author">Average Unit Cost </label>
     
+<p ><label for="author">Order Cost </label> 
+<input  type="name" id="CPolicyID"  onchange="btn()"  size="40" aria-required="true" name="CPolicyID" required placeholder="Enter the Order cost"></p>
+ 
+<br>
+<br>
+<br>
+<p ><label for="author">Sub Total</label></p>
+<br>
+<p ><label for="author">Discount % </label></p>
+    <br>
+<p ><label for="author">Total</label> </p>
+    </aside>
+
+</div><!-- #secondary.widget-area -->		</div>
 	</div>
 
 	</main><!-- main -->
-       
-        </form>
         <%@include file="footer.jsp" %>
 </div><!-- #page -->
 
