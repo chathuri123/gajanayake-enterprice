@@ -11,8 +11,7 @@ String v = request.getParameter("value");
 String f = request.getParameter("field");
 
  
-String ter="Invalid email id"; 
-String emp="please fill out the field";
+
 
 
 
@@ -33,6 +32,23 @@ if(f.equals("subcat"))
         <% while(rs.next()) {%>
 
         <%="<option>"+rs.getString("SubCatName")+"</option>"%>
+        
+        <%}%>
+    <%="</select>"%>
+    
+
+  
+<%}
+if(f.equals("MbModel"))
+{
+    
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("select * from mbmodel where BrandID='"+v+"'");%>
+    <%="<label>Bike Model</label><br> " %>
+    <%="<select name='bmodel' id='bmodel' style='width:250px'>"%>
+        <% while(rs.next()) {%>
+
+        <option value="<%=rs.getString("ModelID")%>"><%=rs.getString("Name")%></option>
         
         <%}%>
     <%="</select>"%>
