@@ -96,7 +96,7 @@
     
   
     <td><a href="ViewSpareParts1.jsp?spID=<%=rs.getString("SparePartID")%>">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>">Remove</a>
+    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
    
   </tr>
  <%}%>

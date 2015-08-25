@@ -95,7 +95,7 @@
      
      String fullname=fname+" "+lname;
      String password=userID;
-     String nameWithIni="jkoj";
+     String nameWithIni=fname+" "+lname;
      String username=userID;
      double salary=0;
      double accBalance =0;

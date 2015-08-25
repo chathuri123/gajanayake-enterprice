@@ -7,16 +7,7 @@
 <!DOCTYPE html>
 <%@include file="content.jsp" %>
 
-<script>
 
-/*function btn() {
-  var y = document.getElementById('fname');
-  alert(y)
-
-}*/
-
-
-</script>
 
 </head>
 <body class="page page-id-39 page-template-default no-fittext basic">
@@ -27,6 +18,231 @@
 			<%@include file="header.jsp" %>
 <!-- #site-navigation -->
 
+
+<script>
+    
+$(document).ready(function() {
+    
+    
+    
+    
+
+    $('#inpolfrm #plcmp').bind('input', function(){
+        
+       var tmp;
+        
+       $.ajax({type:    'POST',
+                 url:     'InCmpList.jsp',
+                 cache:   false,
+                 success: function(data){
+                     tmp = data.split("|");
+                     for(var x=0;x<tmp.length;x++)
+                     {
+                         
+                         tmp[x]= $.trim(tmp[x]);
+                         
+                         
+                     }
+                    $( "#plcmp" ).autocomplete({
+                        minLength:1,
+               source: tmp
+            });
+                    
+                 }
+                });
+        
+        
+
+            
+            
+  
+  
+});
+    
+    
+    
+    
+    
+        // process the form
+    $('#inpolfrm').submit(function(event) {
+
+
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+  
+    
+  
+	var request =  $.ajax({
+	    type: "POST",
+	    url: formURL,
+	    data: postData
+	  });
+          
+          
+          
+          request.done(function( msg ) {
+ if(msg.indexOf("ok") >= 0){
+     
+     
+     $("#msg").text("Insurance Policy Added.");
+     
+      $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+    
+    $('#inpolfrm')[0].reset();
+     
+     
+     
+ }
+ 
+ else
+ {
+     $("#msg").text("Insurance Policy Not Added.\n"+msg);
+      $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+     
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+});
+          
+          
+	 
+  
+  
+  
+         event.preventDefault();
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    // process the form
+    $('#infrm').submit(function(event) {
+
+
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+  
+    
+  
+	var request =  $.ajax({
+	    type: "POST",
+	    url: formURL,
+	    data: postData
+	  });
+          
+          
+          
+          request.done(function( msg ) {
+ if(msg.indexOf("ok") >= 0){
+     
+     
+     $("#msg").text("Insurance Company Added.");
+     
+      $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+    
+    $('#infrm')[0].reset();
+     
+     
+     
+ }
+ 
+ else
+ {
+     $("#msg").text("Insurance Company Not Added.\n"+msg);
+      $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+     
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+});
+          
+          
+	 
+  
+  
+  
+         event.preventDefault();
+    });
+
+});
+  
+
+
+</script>
+
 			 <div class="title-card-wrapper">
                
 			</div>
@@ -36,9 +252,28 @@
 		<main>
                     <br>
 	<div class="container">
+            
+            
+            
+      <div id="dialog-message" >
+          <p id="msg">
+		
+	</p>
+	
+</div>
+            
+            
+      
+            
+            
+            
+            
+            
+            
+            
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8 pull-left hfeed">
 									<!-- #post-39 -->
 
 					
@@ -55,24 +290,22 @@
 </article>
 <div id="respond" class="comment-respond">
     
-<form action="AddInsuranceCompany1.php" method="post"  class="comment-form" >
+    <form  id="infrm"  action="AddInsuranceCompany1.jsp" method="POST" class="comment-form" >
 
 							
-<p ><label for="author">Name </label> 
-<input  type="name" id="name"  onchange="btn()"  size="70" aria-required="true" name="name" required placeholder="Enter the Company Name"></p>
-<p ><label for="author">Reg-No</label> 
-<input id="nic" type="name"  size="70" aria-required="true" name="nic" required placeholder="Enter the Reg-No"></p>
-<p ><label for="author">Address </label> 
-<input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the Address"></p>
-<p ><label for="author">Tel(Head Office) </label> 
-<input  onmousemove="btn()" type="number"  size="70" aria-required="true" name="SDate" required placeholder="Enter the number"></p>
-<p><label for="author">Tel (Branch)</label> 
-<input  type="number" size="70" aria-required="true" name="Fdue" required placeholder="Enter the Number"></p>
-<p ><label for="author">Email</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the Email "></p>
+<p ><label for="name">Name </label> 
+<input  type="text" id="name"   size="70" aria-required="true" name="name_" required placeholder="Enter the Company Name"></p>
+<p ><label for="regno">Reg-No</label> 
+<input id="regno" type="text"  size="70" aria-required="true" name="regno_" required placeholder="Enter the Reg-No"></p>
+<p ><label for="address">Address </label> 
+<input  id="address" type="text"  size="70" aria-required="true" name="address_" required placeholder="Enter the Address"></p>
+<p ><label for="telh">Tel (Head Office) </label> 
+<input  id="telh" type="text"  pattern= "[0-9]{10}"  title= "Ten digit TelNo." aria-required="true" name="telh_" required placeholder="Enter the number"></p>
+
+
 
 <p class="form-submit">
-<input type="submit" class="submit" value="Add Company"> 
+    <input type="submit" class="submit" value="Add Company">
 </p>					
 </form>
 							</div><!-- #respond -->
@@ -87,18 +320,24 @@
 					    	
 					</article>
 <aside id="search-2" class="widget widget_search">
-    <form action="AddInsurancePlans1.php" method="post"  class="comment-form" >
+    <form id="inpolfrm" action="AddInsurancePolicy1.jsp" method="POST" class="comment-form" >
+       
+        <p>
+            
+            <label for="plcmp">Insurance Company </label> 
+      <input type="text" id="plcmp" name="plcmp" size="40" aria-required="true" required placeholder="Enter the Company Name">
+        </p>
         
-<p ><label for="author">Name </label> 
-<input  type="name" id="name"  onchange="btn()"  size="40" aria-required="true" name="name" required placeholder="Enter the Plan Name"></p>
-<p ><label for="author">Company Policy ID </label> 
-<input  type="name" id="CPolicyID"  onchange="btn()"  size="40" aria-required="true" name="CPolicyID" required placeholder="Enter the Company Policy ID"></p>
-<p ><label for="author">Rate </label> 
-<input  type="number" id="rate"  onchange="btn()"  size="40" aria-required="true" name="rate" required placeholder="Enter the Rate"></p>
-<p ><label for="author">Value </label> 
-    <input  type="number" id="Value"  onchange="btn()"  size="40" aria-required="true" name="Value" required placeholder="Enter the No of Installments"></p>
+        
+        
+<p ><label for="plname">Name </label> 
+<input  type="text" id="plname"    size="40" aria-required="true" name="plname" required placeholder="Enter the Policy Name"></p>
+
+
+<p ><label for="value_">Value </label> 
+    <input  type="number" id="value_"   min="1.00" size="40" aria-required="true" name="value_" required placeholder="Enter the Value"></p>
 <p class="form-submit">
-<input type="submit" class="submit" value="Add Policy"> 
+ <input type="submit" class="submit" value="Add Policy">
 </p>
     </form>
 </aside>

@@ -2,6 +2,11 @@ function noti()
 {
     alert("Successfuly Added");
 }
+function notu()
+{
+    alert("Successfuly Updated");
+}
+
 
 function xmlhttpVPost(field,value,file)
 { 

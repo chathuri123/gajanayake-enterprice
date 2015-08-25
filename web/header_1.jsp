@@ -22,14 +22,10 @@
 <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home active menu-item-91">
 <a href="index.jsp">Home</a></li>
 <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-103">
-<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Users<b class="caret"></b></a>
+<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Customer<b class="caret"></b></a>
 <ul class="dropdown-menu">
 	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
 <a href="AddCustomer.jsp">Add Customer</a></li>
-        <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
-<a href="AddSupplier.jsp">Add Supplier</a></li>
-        <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">
-            <a href="AddEmployee.jsp">Add Employee</a></li>
 	
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
 <a href="ViewCustomers.jsp">View Customer</a></li>
@@ -45,21 +41,18 @@
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
 <a href="ViewSpareParts.jsp">View spare parts</a></li>
         <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-
 <a href="">Get Reports</a></li>
 </ul>
 </li>
 <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-96">
 <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="">Bikes <b class="caret"></b></a>
 <ul class="dropdown-menu">
-	 <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
-<a href="sellBike.jsp">Sell Bike</a></li>
+	
         <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
 <a href="AddBike.jsp">Add Bike</a></li>
         <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
 <a href="AddBikeBrand.jsp">Add Bike Brand</a></li>
         <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
-
 <a href="AddBikeModel.jsp">Add Bike Model</a></li>
 	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
 <a href="ViewBikes.jsp">View Bike</a></li>
@@ -88,7 +81,6 @@
        
 </ul>
 </li>
-
 <li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-100">
 <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Post delivery Inspections<b class="caret"></b> </a>
 <ul class="dropdown-menu">
@@ -108,7 +100,7 @@
     <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
         <a href="AddTradeInBike.jsp">Add Trade in Bike</a></li>
 	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
-<a href="viewTradeIn.jsp">View</a></li>
+<a href="ViewTradeIn.jsp">View</a></li>
 	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">
 <a href="Approvals">Approvals</a></li>
         <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">

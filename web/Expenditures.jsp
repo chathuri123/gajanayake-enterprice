@@ -38,7 +38,7 @@
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8  hfeed">
 									<!-- #post-39 -->
 
 					
@@ -54,25 +54,26 @@
 	
 <div id="respond" class="comment-respond">
     
-<form action="AddLeasingCompany1.php" method="post"  class="comment-form" >
+<form action="" method="post"  class="comment-form" >
 
 							
 <p ><label for="author">Stationary </label>
-<input  type="name" id="name"  onchange="btn()"  size="70" aria-required="true" name="name" required placeholder="Enter the expense "></p>
+<input  type="number" min="0.00"    size="100" aria-required="true"  required placeholder="Enter the expense "></p>
+
 <p ><label for="author">Current Bill</label> 
-<input id="nic" type="name"  size="70" aria-required="true" name="nic" required placeholder="Enter the expense "></p>
+<input  min="0.00" type="number"  size="100" aria-required="true"  required placeholder="Enter the expense "></p>
 <p ><label for="author">Water Bill </label> 
-<input  onmousemove="btn()" type="name"  size="70" aria-required="true" name="SDate" required placeholder="Enter the expense "></p>
+<input   type="number" min="0.00" size="100" aria-required="true"  required placeholder="Enter the expense "></p>
 <p ><label for="author">Employee Salaries </label> 
-<input  onmousemove="btn()" type="number"  size="70" aria-required="true" name="SDate" required placeholder="Enter the expense "></p>
+<input   type="number" min="0.00" size="100" aria-required="true"  required placeholder="Enter the expense "></p>
 <p><label for="author">Income tax</label> 
-<input  type="number" size="70" aria-required="true" name="Fdue" required placeholder="Enter the expense "></p>
+<input  type="number"  min="0.00" size="100" aria-required="true"  required placeholder="Enter the expense "></p>
 <p ><label for="author">Telephone Bill</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the expense  "></p>
+<input  type="number"  min="0.00" size="100" aria-required="true"  required placeholder="Enter the expense  "></p>
 <p ><label for="author">Damages</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the expense  "></p>
+<input type="number"  min="0.00" size="100" aria-required="true"  required placeholder="Enter the expense  "></p>
 <p ><label for="author">Vehicle Maintains</label> 
-<input id="" type="email"  size="70" aria-required="true" name="Fdue" required placeholder="Enter the expense "></p>
+<input  type="number" min="0.00"  size="100" aria-required="true"  required placeholder="Enter the expense "></p>
 
 
 <p class="form-submit">
@@ -82,7 +83,7 @@
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
-				<div id="secondary" class="col-md-4" role="complementary">
+				<div id="secondary" class="col-md-4 pull-right" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
 						<h3 >Add Annual Expenditures</h3>
 
@@ -92,15 +93,17 @@
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
-    <form action="AddLeasingPlans1.php" method="post"  class="comment-form" >
+    <form action="" method="post"  class="comment-form" >
 
 <p ><label for="author">Annual allowance for employees </label> 
-<input  type="name" id="name"  onchange="btn()"  size="40" aria-required="true" name="name" required placeholder="Enter the expense"></p>
+<input  type="number"  min="0.00"   size="100" aria-required="true"  required placeholder="Enter the expense"></p>
 <p ><label for="author">License renew </label> 
-<input  type="name" id="CPlanID"  onchange="btn()"  size="40" aria-required="true" name="CPlanID" required placeholder="Enter the expense"></p>
+<input  type="number"   min="0.00"   size="100" aria-required="true"  required placeholder="Enter the expense"></p>
 <p ><label for="author">Domain renew cost </label> 
-<input  type="number" id="rate"  onchange="btn()"  size="40" aria-required="true" name="rate" required placeholder="Enter the expense"></p>
-
+<input  type="number"  min="0.00"    size="100" aria-required="true"  required placeholder="Enter the expense"></p>
+<p class="form-submit">
+<input type="submit" class="submit" value="Add "> 
+</p>
     </form>
 </aside>
 

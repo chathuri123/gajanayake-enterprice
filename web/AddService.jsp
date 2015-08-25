@@ -39,7 +39,7 @@
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8  hfeed">
 									<!-- #post-39 -->
 
 					
@@ -55,11 +55,11 @@
 	
 	
 <div id="respond" class="comment-respond">
-<form action="AddCourse1.php" method="post"  class="comment-form" >
+<form action="" method="post"  class="comment-form" >
 
     <p ><label>Bike </label><br>
         
-<input  type="name" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Bike using Reg-No/BikeID"></p>
+<input  type="text" id="Fname" name="Fname"  size="70" aria-required="true" required placeholder="Search Bike using Reg-No/BikeID"></p>
 
 
 <p ><label>Service term</label><br>
@@ -70,16 +70,16 @@
     </select>
 </p>
 <p ><label>Current Millage </label><br>
- <input  type="name" id="Aname"  onchange="btn()"  size="70" aria-required="true" name="Aname" required placeholder="Enter the Current millage"></p>
+ <input  type="number" id="Aname"  min="0.00" size="70" aria-required="true" name="Aname" required placeholder="Enter the Current millage"></p>
    
 </p>
 <p ><label>Next service Millage </label><br>
- <input  type="name" id="Aname"  onchange="btn()"  size="70" aria-required="true" name="Aname" required placeholder="Enter the Next service millage"></p>
+ <input  type="number" id="Aname"  min="25.00"  size="70" aria-required="true" name="Aname" required placeholder="Enter the Next service millage"></p>
    
 </p>
 							
 <p ><label>Other Expenses </label> 
-<input  type="number" id="Aname"  onchange="btn()"  size="70" aria-required="true" name="Aname" required placeholder="Enter the value"></p>
+<input  type="number" id="Aname"  min="0.00" size="70" aria-required="true" name="Aname" required placeholder="Enter the value"></p>
 
 <p><label>Description</label> 
     <textarea rows="4" aria-required="true" name="descrip" id="descrip" required placeholder="Enter the Desription"></textarea></p>
@@ -91,7 +91,7 @@
 							</div><!-- #respond -->
 			</div><!-- #comments .comments-area -->			</div>
 			
-				<div id="secondary" class="col-md-4" role="complementary">
+				<div id="secondary" class="col-md-4 pull-right" role="complementary">
                                     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
 						
 <H3>Operations</H3>
