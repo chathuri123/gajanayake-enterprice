@@ -127,13 +127,13 @@ if(f.equals("price"))
 }
 if(f.equals("discount1"))
 {
-  
+     session.setAttribute("discount",0);
      double price =Double.parseDouble(session.getAttribute("price").toString());
      
     double dis=0;
     dis=Double.parseDouble(v);
     price=price-(price * dis/100);
-    session.setAttribute("price",price);
+    session.setAttribute("disprice",price);
     session.setAttribute("discount",dis);
       %><%="<b>New price = Rs "+price+"</b>"%><%
 }
@@ -176,7 +176,7 @@ if(f.equals("instalment"))
     double rate=0;
     double rdownPayment=0;
     double downPayment=0;
-    double price =Double.parseDouble(session.getAttribute("price").toString());
+    double price =Double.parseDouble(session.getAttribute("disprice").toString());
     session.setAttribute("lPlanID",v);
     session.setAttribute("downPayment",downPayment);
     ResultSet rs = stmt.executeQuery("select * from leasingplans where PlanID='"+v+"' ");%>
@@ -187,7 +187,7 @@ if(f.equals("instalment"))
         
        }
       
-         price=price+(price*rate/100);
+         price=price+(price*(rate/100));
          session.setAttribute("leasep",price);
          downPayment=price*rdownPayment/100;
          session.setAttribute("downPayment",downPayment);
@@ -224,14 +224,14 @@ if(f.equals("Dpayval"))
     else
     {
         cusDpay1=cusDpay;
-        %><%=%><%
+       
     }
     session.setAttribute("payment",cusDpay1);
     
 }
 if(f.equals("lyears1"))
 {
-    double downPayment=Double.parseDouble(session.getAttribute("cusDpay").toString());
+    double downPayment=Double.parseDouble(session.getAttribute("payment").toString());
     String lPlanID=session.getAttribute("lPlanID").toString();
     int years=Integer.parseInt(v);
     int maxYears=0;
@@ -251,10 +251,11 @@ if(f.equals("lyears1"))
     }
     else
     {
-      monthlyPay=price-downPayment/(years*12);
+      monthlyPay=(price-downPayment)/(years*12);
       session.setAttribute("monthlyPay",monthlyPay);
+      String mPay = String.format("%.2f", monthlyPay);
       
-      %><%="<p style='color:green'>Monthly Payment "+"Rs "+monthlyPay+"<p>"%><%
+      %><%="<p style='color:green'>Monthly Payment "+"Rs "+mPay+"<p>"%><%
       
     }
     

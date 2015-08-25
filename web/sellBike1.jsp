@@ -9,9 +9,9 @@
 <%@page import="java.util.Date"%>
 <%@include file="DB_Connector.jsp"%> 
 <%
-String f = request.getParameter("field");
+/*String f = request.getParameter("field");
 if(f.equals("release"))
-{
+{*/
     Statement stmt1 = conn.createStatement();
       int id=0;
       String OrderID="OR";
@@ -34,7 +34,7 @@ if(f.equals("release"))
      id=id+1;
      OrderID="OR"+id;
       id=0;
-      String payID="OR";
+      String payID="PM";
       try{
       stmt1 = conn.createStatement();
       String sql = "SELECT * FROM payments ORDER BY PaymentID DESC LIMIT 1";
@@ -60,10 +60,17 @@ if(f.equals("release"))
      String Date =dateFormat.format(date);
       //End OF GetDate
      String userID=session.getAttribute("userID").toString();
-     String planID = session.getAttribute("lPlanID").toString();
+     String lplanID = session.getAttribute("lPlanID").toString();
      String BikeID = session.getAttribute("BikeID").toString();
-     String amount =session.getAttribute("downPayment").toString();
-     String discount =session.getAttribute("discount").toString();
+     double amount =Double.parseDouble(session.getAttribute("downPayment").toString());
+     double discount =Double.parseDouble(session.getAttribute("discount").toString());
+     
+    /* String userID="CS100007";
+  
+     String BikeID="MB100001";
+     String lplanID="LP100001";
+     double amount=0;
+     double discount=0;*/
      
      
      
@@ -73,10 +80,14 @@ if(f.equals("release"))
              Statement stat=conn.createStatement();
              
          
-             String sql="INSERT INTO `gajanayake`.`orders` (`OrderID`, `Status`, `Date`, `userID`) VALUES ('"+OrderID+"', 'pending', '"+Date+"', '"+userID+"')"
-                      + "INSERT INTO `gajanayake`.`orderbike` (`OrderID`, `InsuranceID`, `LeasingID`, `BikeID`) VALUES ('"+OrderID+"', NULL, '"+planID+"', '"+BikeID+"')"
-                     + "INSERT INTO `gajanayake`.`payments` (`PaymentID`, `Date`, `Amount`, `OrderID`, `Discount`) VALUES ('"+planID+"', '"+Date+"', '"+amount+"', '"+OrderID+"', '"+discount+"');";
+             String sql="INSERT INTO `gajanayake`.`orders` (`OrderID`, `Status`, `Date`, `userID`) VALUES ('"+OrderID+"', 'pending', '"+Date+"', '"+userID+"')";
              stat.executeUpdate(sql);
+             String sql1 ="INSERT INTO `gajanayake`.`orderbike` (`OrderID`, `InsuranceID`, `LeasingID`, `BikeID`) VALUES ('"+OrderID+"', NULL, '"+lplanID+"', '"+BikeID+"')";
+             stat.executeUpdate(sql1);
+             String sql2 ="INSERT INTO `gajanayake`.`payments` (`PaymentID`, `Date`, `Amount`, `OrderID`, `Discount`) VALUES ('"+payID+"', '"+Date+"', '"+amount+"', '"+OrderID+"', '"+discount+"')";
+             
+             
+             stat.executeUpdate(sql2);
              
             
             
@@ -91,6 +102,6 @@ if(f.equals("release"))
           }
   
         
-}
+//}
 
 %> 

@@ -10,7 +10,7 @@ self.xmlHttpReq = new XMLHttpRequest();
 else if (window.ActiveXObject) { 
 self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
 } 
-self.xmlHttpReq.open('POST', file, false); 
+self.xmlHttpReq.open('POST',file, false); 
 self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
 self.xmlHttpReq.onreadystatechange = function()
 {

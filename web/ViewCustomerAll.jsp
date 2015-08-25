@@ -52,16 +52,13 @@
 
 <br>
 
-<form action="ViewCustomers.jsp" method="post"  class="comment-form">
-<p ><label>Customer</label> 
-<input  type="text" name="userid" onchange="btn()"  size="70" aria-required="true" id="userid" required placeholder="Search by cutomer ID"></p>
-</form>
+
 <%  
 
  String userid=request.getParameter("userid");
  
- Statement stmt1 = conn.createStatement();
- ResultSet rs1 = stmt1.executeQuery("select * from user where userID LIKE '%"+userid+"%'");
+ Statement stmt1 =conn.createStatement();
+ ResultSet rs1 = stmt1.executeQuery("select * from user where Customer=1");
 %>
 
  
@@ -77,7 +74,7 @@
     <td>Email</td>
     <td>Address</td>
     <td>NIC No</td>
-   
+    
 
   </tr>
    <% while(rs1.next()) {%>
@@ -88,10 +85,7 @@
     <td><%=rs1.getString("Email") %></td>
     <td><%=rs1.getString("Address") %></td>
     <td><%=rs1.getString("NIC") %></td>
-    
-    <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
-    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>">Remove</a>
-   
+
    
   </tr>
  <%}%>

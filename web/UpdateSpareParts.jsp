@@ -31,18 +31,11 @@
           String SparePartID=request.getParameter("SparePartID");
           String Subcat=request.getParameter("subcat");
           
-          String Supplier=request.getParameter("supplier");
-          Statement stmt3=conn.createStatement();
+         
           
           String Bmodel=request.getParameter("modelNo");
-          Statement stmt2=conn.createStatement();
-          ResultSet rs2=stmt2.executeQuery("select m.ModelID from spareparts s,mbmodel m where m.ModelID=s.BModelID AND m.Name='"+Bmodel+"'");
-          String model="";
-          while(rs2.next())
-            {
-              model=rs2.getString("m.ModelID");
-        
-            }
+          
+          String Supplier=request.getParameter("supplier");
           
           String Name=request.getParameter("Name");
           int Qty=Integer.parseInt(request.getParameter("qty"));
@@ -53,7 +46,7 @@
           String description=request.getParameter("descrip");
           
           Statement stat=conn.createStatement();
-          String sql="update `gajanayake`.`spareparts` set Name='"+Name+"',Description='"+description+"',ShellNo='"+ShellNo+"',Quantity='"+Qty+"',unitcost='"+unitcost+"',SalePrice='"+saleprice+"',PurchasePrice='"+purprice+"',BModelID='"+model+"',SupplierID='"+Supplier+"' where SparePartID='"+SparePartID+"'";
+          String sql="update `gajanayake`.`spareparts` set Name='"+Name+"',Description='"+description+"',ShellNo='"+ShellNo+"',Quantity='"+Qty+"',unitcost='"+unitcost+"',SalePrice='"+saleprice+"',PurchasePrice='"+purprice+"',BModelID='"+Bmodel+"',SupplierID='"+Supplier+"',SubCategory='"+Subcat+"' where SparePartID='"+SparePartID+"'";
           stat.executeUpdate(sql);
           
        

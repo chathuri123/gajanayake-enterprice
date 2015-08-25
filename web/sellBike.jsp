@@ -40,6 +40,7 @@ self.xmlHttpReq.onreadystatechange = function()
      updatepage(field,self.xmlHttpReq.responseText); 
   } 
 }
+alert(" Proccess Successful");
 var word1 ='field='+ escape(field);
 
 
