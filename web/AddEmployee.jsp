@@ -64,7 +64,12 @@ document.getElementById(field).innerHTML = str;
 alert('Successfuly Added');
 
 
-} 
+}
+function getrole()
+{
+    var word8 ='role='+escape(document.getElementById('role').value);
+    return word;
+}
 
 </script>
 
@@ -90,7 +95,7 @@ session.setAttribute("noti","No");
 			</div>
 
 		</header>
-<form method="POST"    class="comment-form" action="Addcustomer1.jsp?role=Customer">
+<form method="POST"    class="comment-form" action="Addcustomer1.jsp">
 
 
 		<main>

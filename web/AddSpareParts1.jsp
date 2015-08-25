@@ -93,6 +93,8 @@
              String sql="INSERT INTO `gajanayake`.`spareparts`(`SparePartID`,`Quantity`,`SubCategory`,`PurchasePrice`,`ShellNo`,`Description`,`ModelID`,`SupplierID`,`unitcost`,`SalePrice`,`Name`,`BModelID`) VALUES('"+SparePartID+"','"+Quantity+"','"+Category+"','"+purprice+"','"+ShellNo+"','"+description+"','"+ModelNo+"','"+Supplier+"','"+unitcost+"','"+saleprice+"','"+Name+"','"+Bmodel+"')";
              
              stat.executeUpdate(sql);
+             response.sendRedirect("AddSpareparts.jsp");
+             session.setAttribute("noti","yes");
             
              
              
