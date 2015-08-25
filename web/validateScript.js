@@ -1,4 +1,5 @@
-function xmlhttpVPost(field,value,file) { 
+function xmlhttpVPost(field,value,file)
+{ 
 var xmlHttpReq = false; 
 var self = this; 
 

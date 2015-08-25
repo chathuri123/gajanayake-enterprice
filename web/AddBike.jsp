@@ -73,7 +73,6 @@ function noti()
 
 
 </head>
-
 <% if(session.getAttribute("noti").toString()== "yes")
 {
     %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
@@ -108,14 +107,15 @@ session.setAttribute("noti","No");
 
 					
 <div id="comments" class="comments-area">
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+    <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
 						<h1 class="entry-title">Add Bike</h1>
 
 					    <!-- .entry-content -->
 
 					    	<footer class="clearfix">
 	    	</footer><!-- .entry -->
-					</article>	
+					</article>
+	
 	
 <div id="respond" class="comment-respond">
 <form class="comment-form" action="AddBike1.jsp">
@@ -175,7 +175,14 @@ session.setAttribute("noti","No");
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
+<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title" style="color:white">Add Bike</h1>
 
+					    <!-- .entry-content -->
+
+					    	<footer class="clearfix">
+	    	</footer><!-- .entry -->
+					</article>
 <aside id="search-2" class="widget widget_search">
 
 
