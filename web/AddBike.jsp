@@ -103,12 +103,19 @@ session.setAttribute("noti","No");
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+<div id="primary" class="col-md-8 pull-left hfeed">
 									<!-- #post-39 -->
 
 					
 <div id="comments" class="comments-area">
-	
+<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title">Add Bike</h1>
+
+					    <!-- .entry-content -->
+
+					    	<footer class="clearfix">
+	    	</footer><!-- .entry -->
+					</article>	
 	
 <div id="respond" class="comment-respond">
 <form class="comment-form" action="AddBike1.jsp">
@@ -168,14 +175,7 @@ session.setAttribute("noti","No");
 			</div><!-- #comments .comments-area -->			</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Bike</h1>
 
-					    <!-- .entry-content -->
-
-					    	<footer class="clearfix">
-	    	</footer><!-- .entry -->
-					</article>
 <aside id="search-2" class="widget widget_search">
 
 
