@@ -185,7 +185,7 @@ ResultSet rs = stmt.executeQuery("select * from leasingcompany");
     <td><%=rs.getString("TelNo")%></td>
     <td><%=rs.getString("C_RegNo")%></td>
     <td><a href="EditLeasingCompany.jsp?id=<%=rs.getString("LeasingID")%>">View/edit</a><td>
-    <td><a href="" id="<%=rs.getString("LeasingID")%>" class="del">Delete</a></td>
+    <td><a href="" id="<%=rs.getString("LeasingID")%>" class="del" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
    
   </tr>
  <%}%>

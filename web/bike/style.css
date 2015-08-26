@@ -12,9 +12,9 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
-
+.ui-dialog .ui-dialog-titlebar, .ui-dialog .ui-dialog-buttonpane { font-size: 0.8em; }
 body {
-  margin: 0; }
+  margin: 0;   }
 
 article,
 aside,
@@ -728,7 +728,7 @@ pre {
   padding-right: 20px; }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
-  float: right; }
+  float: left; }
 
 .col-xs-1 {
   width: 8.33333%; }
@@ -5039,6 +5039,11 @@ a img.aligncenter {
   display: block; }
 
 
-#fname {
+#dialog-message {
+font-size: 62.5%;
+}
 
+.ui-autocomplete.ui-widget {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 13px;
 }

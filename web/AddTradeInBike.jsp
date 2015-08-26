@@ -67,8 +67,16 @@
 </script>
 
 </head>
-<body class="page page-id-39 page-template-default no-fittext basic">
-
+<% if(session.getAttribute("noti").toString()== "yes")
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
+}
+else
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic'>"%><% 
+}
+session.setAttribute("noti","No");
+%>
     <div id="page">
 
         <header id="header">
@@ -80,7 +88,7 @@
             </div>
 
         </header>
- <form class="comment-form" >
+ <form class="comment-form" action="TradeInBikeDAO.jsp" method="post">
         <main>
             <br>
             <div class="container">
@@ -105,11 +113,11 @@
                                     <p ><label>Customer </label><br>
 
                                         <%Statement stmtCustomer = conn.createStatement();
-                                            ResultSet rsCustomer = stmtCustomer.executeQuery("SELECT CONCAT(u.userID, ' - ' , u.fname, ' ', u.lname) AS customerInfo from user u where u.Customer=1; "); %>
+                                            ResultSet rsCustomer = stmtCustomer.executeQuery("SELECT * from user  where Customer=1; "); %>
 
                                         <select name="cusIdnName" id="cusIdnName" style="width:310px">
                                             <% while (rsCustomer.next()) {%>
-                                            <option><%=rsCustomer.getString("customerInfo")%></option>
+                                            <option value="<%=rsCustomer.getString("userID")%>"><%=rsCustomer.getString("nameWithIni")%></option>
                                             <%}%>
                                         </select>
                                         
@@ -162,7 +170,7 @@
 
                                   
                                    <p class="form-submit">
-                                        <input type="submit" onclick='JavaScript:xmlhttpPost("success")' class="submit"  value="Send for Admin Approval"> 
+                                        <input type="submit"  class="submit"  value="Send for Admin Approval"> 
                                     <div id="success" style="color:green"></div>
                                     </p>
 

@@ -32,7 +32,9 @@
             <a href="AddEmployee.jsp">Add Employee</a></li>
 	
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
-<a href="ViewCustomers.jsp">View Customer</a></li>
+<a href="ViewCustomers.jsp">Search and View users</a></li>
+        <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
+<a href="ViewCustomerAll.jsp">View all users</a></li>
         <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
 <a href="">Get Customer Reports</a></li>
 </ul>
@@ -43,7 +45,9 @@
 <a href="AddSpareparts.jsp">Add Spare parts</a></li>
 	
 	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
-<a href="ViewSpareParts.jsp">View spare parts</a></li>
+<a href="ViewSpareParts.jsp">Search and View spare parts</a></li>
+        <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
+<a href="ViewSparePartAll.jsp">View all spare parts</a></li>
         <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
 
 <a href="">Get Reports</a></li>

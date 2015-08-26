@@ -181,7 +181,7 @@ ResultSet rs = stmt.executeQuery("select p.name,p.value,p.InsuranceID,p.PolicyID
     <td><%=rs.getString("value")%></td>
  
     <td><a href="EditPolicy.jsp?id=<%=rs.getString("PolicyID")%>">View/edit</a><td>
-    <td><a href="" id="<%=rs.getString("PolicyID")%>" class="del">Delete</a></td>
+    <td><a href="" id="<%=rs.getString("PolicyID")%>" class="del" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
    
   </tr>
  <%}%>

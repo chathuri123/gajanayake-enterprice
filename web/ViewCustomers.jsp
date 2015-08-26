@@ -46,6 +46,15 @@
 
 					
 <div id="comments" class="comments-area">
+    <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+						<h1 class="entry-title">View Customer Details</h1>
+
+					    <!-- .entry-content -->
+
+					    	<footer class="clearfix">
+	    	</footer><!-- .entry -->
+					</article>
+
 	
 	
 <div id="respond" class="comment-respond">
@@ -61,7 +70,7 @@
  String userid=request.getParameter("userid");
  
  Statement stmt1 = conn.createStatement();
- ResultSet rs1 = stmt1.executeQuery("select * from user where userID LIKE '%"+userid+"%'");
+ ResultSet rs1 = stmt1.executeQuery("select * from user where userID LIKE '%"+userid+"%' ");
 %>
 
  
@@ -72,9 +81,9 @@
 
   <tr>
     <td>Customer ID</td>
-    <td>First name</td>
-    <td>Last name</td>
-    <td>Email</td>
+    <td>Full Name</td>
+   
+    <td style="width: 2px">Email</td>
     <td>Address</td>
     <td>NIC No</td>
    
@@ -83,14 +92,14 @@
    <% while(rs1.next()) {%>
   <tr>
     <td><%=rs1.getString("userID")%></td>
-    <td><%=rs1.getString("fname") %></td>
-    <td><%=rs1.getString("lname") %></td>
-    <td><%=rs1.getString("Email") %></td>
+    <td><%=rs1.getString("nameWithIni") %></td>
+    
+    <td style="width: 2px"><%=rs1.getString("Email") %></td>
     <td><%=rs1.getString("Address") %></td>
     <td><%=rs1.getString("NIC") %></td>
     
     <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
-    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>">Remove</a>
+    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
    
    
   </tr>

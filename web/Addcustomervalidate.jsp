@@ -47,6 +47,11 @@ if(f.equals("fname1"))
     {
       %><%=emp%><%  
     }
+    else if(isNumeric(v))
+    {
+        %><%="Cannot be numeric"%><% 
+        
+    }
         
 
   
@@ -55,7 +60,12 @@ if(f.equals("lname1"))
 {
     if(v.isEmpty())
     {
-    %><%=emp%><%
+      %><%=emp%><%  
+    }
+    else if(isNumeric(v))
+    {
+        %><%="Cannot be numeric"%><% 
+        
     }
 }
 if(f.equals("nic1"))
@@ -102,11 +112,21 @@ if(f.equals("nic1"))
         
      
 }
-if(f.equals("email"))
+if(f.equals("email1"))
 {
     if(v.isEmpty())
     {
     %><%=emp%><%
+    }
+    else
+    {
+        int atpos=v.indexOf("@"); 
+        int dotpos=v.lastIndexOf("."); 
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=v.length()) 
+        {%> 
+        <%="Invalid Email Address"%> 
+        <%} 
+ 
     }
 }
 if(f.equals("year"))
@@ -118,6 +138,29 @@ if(f.equals("year"))
     else if(Integer.parseInt(v)>2015){
       %><%=invalidYear%><%  
     }
+
+}
+if(f.equals("BDay1"))
+{
+    if(v.isEmpty())
+    {
+      %><%=emp%><%  
+    }
+   
+
+}
+if(f.equals("tel1"))
+{
+    if(v.isEmpty())
+    {
+      %><%=emp%><%  
+    }
+    else if(v.length()!=10)
+    {
+      %><%="Invalid telephone number "%><%   
+    }
+    
+   
 
 }
 
@@ -137,7 +180,7 @@ if(f.equals("body") || f.equals("engine") || f.equals("tire") || f.equals("overA
 
 
 
-%> 
+
 
 
 </body> 

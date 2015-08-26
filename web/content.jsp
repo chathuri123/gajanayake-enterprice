@@ -32,6 +32,17 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
+<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <link rel="stylesheet" href="bike/jquery-ui.css">
+  <script src="bike/jquery-1.10.2.js"></script>
+  <script src="bike/jquery-ui.js"></script>
+  
+  
+  
+  
+  
+  
 <link rel="stylesheet" id="theme_stylesheet-css" href="bike/style.css" type="text/css" media="all">
 <link rel="stylesheet" id="google_fonts-css" href="bike/css.css" type="text/css" media="all">
 <link rel="stylesheet" id="font_awesome-css" href="bike/font-awesome.css" type="text/css" media="all">
@@ -49,7 +60,7 @@ img.emoji {
 var theme_js_vars = {"arc":"400","fittext":""};
 /* ]]> */
 </script>
-<script type="text/javascript" src="bike/theme.js"></script>
+<script type="text/javascript" src="bike/theam.js"></script>
       <%@ page import="javax.servlet.*" %>
       <%@ page import="javax.servlet.http.*" %>
       <%@ page import="java.sql.*" %>

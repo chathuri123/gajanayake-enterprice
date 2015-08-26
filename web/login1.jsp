@@ -57,11 +57,11 @@ String UserID="";
                
                 
           }
-            if("st".equals(ID))
+            if("AD".equals(ID))
            {
                 
                 
-                
+               response.sendRedirect("index.jsp");  
                
                 
           }
@@ -69,9 +69,10 @@ String UserID="";
           }
           else
           {
-              
+              response.sendRedirect("login.jsp");   
           
           }
+          response.sendRedirect("login.jsp");   
         }
            catch(Exception e)
                 {

@@ -22,21 +22,23 @@
         <% 
         
         String cusIdnName = request.getParameter("cusIdnName");
-//            String bmodel = request.getParameter("bmodel");
-            String engineNo = request.getParameter("engineNo");
-            String chassisNo = request.getParameter("chassisNo");
-            int registerYear = Integer.parseInt(request.getParameter("registerYear"));
-            int bodyCondition = Integer.parseInt(request.getParameter("bodyCondition"));
-            int engineCondition = Integer.parseInt(request.getParameter("engineCondition"));
-            int tireCondition = Integer.parseInt(request.getParameter("tireCondition"));
-            int overallCondition = Integer.parseInt(request.getParameter("overallCondition"));
-            String descrip = request.getParameter("descrip");
+        String bikeModelId  = request.getParameter("bmodel");
+        String engineNo = request.getParameter("engineNo");
+        String chassisNo = request.getParameter("chassisNo");
+        int registerYear = Integer.parseInt(request.getParameter("registerYear"));
+        int bodyCondition = Integer.parseInt(request.getParameter("bodyCondition"));
+        int engineCondition = Integer.parseInt(request.getParameter("engineCondition"));
+        int tireCondition = Integer.parseInt(request.getParameter("tireCondition"));
+        int overallCondition = Integer.parseInt(request.getParameter("overallCondition"));
+        String descrip = request.getParameter("descrip");
+        
+        %><%=cusIdnName%><%
 
          
             
             String tradeId = "TR000001";
-            String customerID = cusIdnName.split(" -")[0];
-            String bikeModelId = "M123456";
+            String customerID = cusIdnName;
+            
                    
             //get bike model id from it's name
 //             Statement stBModel = conn.createStatement();
@@ -95,11 +97,12 @@
 //</editor-fold>
             try {
                 Statement stat = conn.createStatement();
-                String sql = "INSERT INTO tradeinbike(TradeId, CustomerId, BModelID, EngineNo, ChassisNo, RegisteredYear, BodyCondition, EngineCondition, TireCondition, OverollCondition, Description) VALUES('" + tradeId + "','" + customerID + "','" + bikeModelId + "','" + engineNo + "','" + chassisNo + "','" + registerYear + "','" + bodyCondition + "','" + engineCondition + "','" + tireCondition + "','" + overallCondition + "','" + descrip + "')";
-//                String sql = "Insert into tradeinbike(TradeId, CustomerId, BModelID, EngineNo, ChassisNo, RegisteredYear, BodyCondition, EngineCondition, TireCondition, OverollCondition, Description) VALUES ('"+ SparePartID + "', 'CS100014', 'M123456', 'ENGINE500200', 'chasis8500', 2015, '80', '60', '80', '50', 'Good Condition Bike.')";
+            String sql="INSERT INTO `gajanayake`.`tradeinbike` (`TradeId`, `CustomerId`, `BModelID`, `EngineNo`, `ChassisNo`, `RegisteredYear`, `BodyCondition`, `EngineCondition`, `TireCondition`, `OverollCondition`, `Description`, `CRimage`) VALUES ('"+tradeId+"', '"+customerID+"', '"+bikeModelId+"', '"+engineNo+"', '"+chassisNo+"', '"+registerYear+"', '"+bodyCondition+"', '"+engineCondition+"', '"+tireCondition+"','"+overallCondition+"','"+descrip+"', NULL)";
                 
                 stat.executeUpdate(sql);
-                %><%="Successfuly Added"%><%
+                response.sendRedirect("AddTradeInBike.jsp");
+             session.setAttribute("noti","yes");
+             
 
             } catch (Exception e) {
                 e.printStackTrace();

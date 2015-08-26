@@ -125,9 +125,9 @@ session.setAttribute("noti","No");
 <p ><label for="author">Address </label> 
  <textarea rows="4" aria-required="true" name="Address" id="Address" onblur=' JavaScript:xmlhttpVPost("Address1","Address","Addcustomervalidate.jsp")' required placeholder="Enter the Address"></textarea></p><div class="val" id="Address1"></div></p>
 <p ><label for="author">Date Of Birth </label> 
-<input   type="date"  size="70" aria-required="true" id="BDay" name="BDay" required placeholder="Enter the DoB"></p>
+<input   type="date"  size="70" aria-required="true" id="BDay" name="BDay" onblur=' JavaScript:xmlhttpVPost("BDay1","BDay","Addcustomervalidate.jsp")' required placeholder="Enter the DoB"><div class="val" id="BDay1"></div></p>
 <p><label for="author">Phone no</label> 
-<input  type="number"  size="70" aria-required="true" name="tel" id="tel" onblur=' JavaScript:xmlhttpVPost("tel1","tel","Addcustomervalidate.jsp")' required placeholder="Enter the Telephone number"><div class="val" id="tel1"></div></p>
+<input  type="number"  size="70" aria-required="true" min="1.00" name="tel" id="tel" onblur=' JavaScript:xmlhttpVPost("tel1","tel","Addcustomervalidate.jsp")' required placeholder="Enter the Telephone number"><div class="val" id="tel1"></div></p>
 <p ><label for="author">Email</label> 
 <input id="email" type="email"  size="70" aria-required="true" name="email" onblur=' JavaScript:xmlhttpVPost("email1","email","Addcustomervalidate.jsp")' required placeholder="Enter the Email Address"></p><div class="val" id="email1"></div>
 

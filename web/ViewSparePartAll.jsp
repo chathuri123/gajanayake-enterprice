@@ -82,8 +82,8 @@
     <td><%=rs1.getString("Quantity")%></td>
     
   
-    <td><a href="">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>">Remove</a>
+    <td><a href="ViewSpareParts1.jsp?spID=<%=rs1.getString("SparePartID")%>">View/edit</a><td>
+    <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
    
   </tr>
  <%}%>

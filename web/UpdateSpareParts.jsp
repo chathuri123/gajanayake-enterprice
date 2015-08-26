@@ -28,10 +28,10 @@
 
     <%
           
-        /*  String SparePartID=request.getParameter("SparePartID");
+          String SparePartID=request.getParameter("SparePartID");
           String Subcat=request.getParameter("subcat");
           
-          
+         
           
           String Bmodel=request.getParameter("modelNo");
           
@@ -43,25 +43,12 @@
           double saleprice=Double.parseDouble(request.getParameter("sprice"));
           double unitcost=Double.parseDouble(request.getParameter("unitcost"));
           String ShellNo=request.getParameter("shellNo");
-          String description=request.getParameter("descrip");*/
-       
-          String SparePartID="SP100005";
-         String Subcat="SC100004";
-         String Bmodel="BM123456";
-         String Supplier="SU100002";
-         String Name="sdfvs";
-         double Qty=12;
-         double purprice=2;
-         double saleprice=21;
-         double unitcost=12;
-         String ShellNo="cwd";
-         String description="wae";
+          String description=request.getParameter("descrip");
+          
           Statement stat=conn.createStatement();
-         // String sql="update `gajanayake`.`spareparts` set Name='"+Name+"',Description='"+description+"',ShellNo='"+ShellNo+"',Quantity='"+Qty+"',unitcost='"+unitcost+"',SalePrice='"+saleprice+"',PurchasePrice='"+purprice+"',BModelID='"+Bmodel+"',SupplierID='"+Supplier+"',SubCategory='"+Subcat+"' where SparePartID='"+SparePartID+"'";
-          String sql="UPDATE `gajanayake`.`spareparts` SET `Quantity` = '"+Qty+"', `SubCategory` = '"+Subcat+"', `PurchasePrice` = '"+purprice+"', `ShellNo` = '"+ShellNo+"', `Description` = '"+description+"', `SupplierID` = '"+Supplier+"', `unitcost` = '"+unitcost+"', `SalePrice` = '"+saleprice+"', `Name` = '"+Name+"',`BModelID` = '"+Bmodel+"' WHERE `spareparts`.`SparePartID` = '"+SparePartID+"'";
-          String url="ViewSpareParts1.jsp?spID="+SparePartID;
-          response.sendRedirect(url);
-          session.setAttribute("noti","yes");
+          String sql="update `gajanayake`.`spareparts` set Name='"+Name+"',Description='"+description+"',ShellNo='"+ShellNo+"',Quantity='"+Qty+"',unitcost='"+unitcost+"',SalePrice='"+saleprice+"',PurchasePrice='"+purprice+"',BModelID='"+Bmodel+"',SupplierID='"+Supplier+"',SubCategory='"+Subcat+"' where SparePartID='"+SparePartID+"'";
+          stat.executeUpdate(sql);
+          
        
        
        

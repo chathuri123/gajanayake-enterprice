@@ -55,9 +55,9 @@
                                     </article>	
                                     <br>
 
-                                    <form action="ViewSpareParts1.jsp" method="post"  class="comment-form">
+                                    <form action="TradeInBikeDAO.jsp" method="post"  class="comment-form">
                                         <p ><label>Search Trade Bikes</label> 
-                                            <input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search by cutomer Name/ID/Nic"></p>
+                                            <input  type="text" name="iname" onchange="btn()"  size="70" aria-required="true" id="iname" required placeholder="Search by Name/ID/Nic"></p>
                                     </form>
 
                                     <%

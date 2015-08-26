@@ -158,7 +158,7 @@ session.setAttribute("noti","No");
     
     </select>
     
-        <a href="AddSuplier.jsp">Add Supplier</a>
+        <a href="AddSupplier.jsp">Add Supplier</a>
     </p>
     
     <p><label>Bike Brand</label><br>
@@ -178,7 +178,7 @@ session.setAttribute("noti","No");
     <p><div id="MbModel"></div>
     </p>
 <p ><label>Name</label> 
-<input   type="text" name="Name" size="70" aria-required="true" id="Name" required placeholder="Enter the Model number"></p>
+<input   type="text" name="Name" size="70" aria-required="true" onblur='JavaScript:xmlhttpVPost("fname1","fname","Addcustomervalidate.jsp")' id="Name"  required placeholder="Enter the Model name"><div class="val" id="fname1"></div></p>
 
 <p ><label>Model Number</label> 
 <input   type="text" name="modelNo" size="70" aria-required="true" id="modelNo" required placeholder="Enter the Model number"></p>

@@ -9,7 +9,7 @@
 <%@include file="content.jsp" %>
 
 <script>
-/*$(document).ready(function(){
+$(document).ready(function(){
 
 	var thumb = $('#thumb');	
 
@@ -27,7 +27,8 @@
 			thumb.attr('src', response);
 		}
 	});
-})*/
+})
+</script>
 <script src="validateScript.js"></script>
 <script>
 function xmlhttpPost(field)
@@ -80,8 +81,16 @@ alert('Successfuly Added');
 </script>
 
 </head>
-<body class="page page-id-39 page-template-default no-fittext basic">
-
+<% if(session.getAttribute("noti").toString()== "yes")
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
+}
+else
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' >"%><% 
+}
+session.setAttribute("noti","No");
+%>
 	<div id="page">
 
 		<header id="header">
@@ -115,7 +124,7 @@ alert('Successfuly Added');
 	
 <div id="respond" class="comment-respond">
     
-    <form action="AddBikeBrand1.jsp" class="comment-form" >
+    <form action="AddBikeBrand1.jsp" class="comment-form" method="post">
 
 							
 <p ><label>Brand Name </label> 

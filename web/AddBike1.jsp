@@ -23,6 +23,7 @@
     <%
          
           String modelID=request.getParameter("bmodel");
+          out.print(modelID);
           
           String engineno=request.getParameter("engineno");
           

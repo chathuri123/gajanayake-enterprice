@@ -115,7 +115,7 @@ session.setAttribute("noti","No");
 	
 	
 <div id="respond" class="comment-respond">
-<form class="comment-form" action="AddBike1.jsp">
+<form class="comment-form" action="AddBike1.jsp" method="post">
 
 <p ><label>Select Brand </label><br>
  <%
