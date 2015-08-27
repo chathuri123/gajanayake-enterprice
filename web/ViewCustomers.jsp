@@ -99,7 +99,7 @@
     <td><%=rs1.getString("NIC") %></td>
     
     <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
-    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>" onclick="return confirm('Are you sure you want to delete this item?');"><img src="Images/Delete.png"></a>
+    <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>" onclick="return confirm('Are you sure you want to delete this item?');"><img src="Images/DeleteSmall.png"></a>
    
    
   </tr>
