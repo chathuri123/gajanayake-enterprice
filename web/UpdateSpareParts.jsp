@@ -13,11 +13,6 @@
 
 <script>
 
-/*function btn() {
-  var y = document.getElementById('fname');
-  alert(y)
-
-}*/
 
 </script>
 
@@ -48,7 +43,8 @@
           Statement stat=conn.createStatement();
           String sql="update `gajanayake`.`spareparts` set Name='"+Name+"',Description='"+description+"',ShellNo='"+ShellNo+"',Quantity='"+Qty+"',unitcost='"+unitcost+"',SalePrice='"+saleprice+"',PurchasePrice='"+purprice+"',BModelID='"+Bmodel+"',SupplierID='"+Supplier+"',SubCategory='"+Subcat+"' where SparePartID='"+SparePartID+"'";
           stat.executeUpdate(sql);
-          
+           session.setAttribute("noti","yes");
+            response.sendRedirect("ViewSpareParts1.jsp?spID="+SparePartID);
        
        
        

@@ -115,7 +115,7 @@ session.setAttribute("noti","No");
                                         <%Statement stmtCustomer = conn.createStatement();
                                             ResultSet rsCustomer = stmtCustomer.executeQuery("SELECT * from user  where Customer=1; "); %>
 
-                                        <select name="cusIdnName" id="cusIdnName" style="width:310px">
+                                        <select  name="cusIdnName" id="cusIdnName" style="width:310px" required>
                                             <% while (rsCustomer.next()) {%>
                                             <option value="<%=rsCustomer.getString("userID")%>"><%=rsCustomer.getString("nameWithIni")%></option>
                                             <%}%>
@@ -127,7 +127,7 @@ session.setAttribute("noti","No");
                                         <%Statement stmt2 = conn.createStatement();
                                             ResultSet rs2 = stmt2.executeQuery("select * from mbbrand"); %>
 
-                                        <select name="bbrand" id="bbrand" style="width:250px" onchange='JavaScript:xmlhttpVPost("MbModel", "bbrand", "AddSparePartsValidate.jsp")'>
+                                            <select  name="bbrand" id="bbrand" style="width:250px" onchange='JavaScript:xmlhttpVPost("MbModel", "bbrand", "AddSparePartsValidate.jsp")' required>
                                             <% while (rs2.next()) {%>
                                             <option value="<%=rs2.getString("BrandID")%>"><%=rs2.getString("Bname")%></option>
                                             <%}%>
