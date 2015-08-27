@@ -1,5 +1,5 @@
 <%-- 
-    Document   : AddBikeBrand
+    Document   : AddCategory
     Created on : July 03, 2015, 7:21:36 AM
     Author     : chathuri Lakmini
 --%>
@@ -43,14 +43,7 @@ var word1 ='cat='+ escape( document.getElementById('cat').value);
 var the_data =word1;
 self.xmlHttpReq.send(the_data); 
 
-
-
-
-
 }
-
-
-
 
 function updatepage(field,str){ 
 document.getElementById(field).innerHTML = str;
@@ -99,7 +92,7 @@ session.setAttribute("noti","No");
 					
 <div id="comments" class="comments-area">
     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Bike</h1>
+						<h1 class="entry-title">Add Category</h1>
 
 					    <!-- .entry-content -->
 
@@ -112,7 +105,7 @@ session.setAttribute("noti","No");
 <form class="comment-form" action="AddCategory1.jsp" method="post">
 							
 <p ><label>Category</label> 
-<input  type="text" id="cat"   size="70" aria-required="true" name="cat" required placeholder="Enter the category"></p>
+<input  type="text" id="cat" size="70" aria-required="true" name="cat" required placeholder="Enter the category"></p>
 
 <p class="form-submit">
  <input type="submit"  class="submit"  value="Add"> 
@@ -125,7 +118,7 @@ session.setAttribute("noti","No");
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title" style="color:white">Add Bike</h1>
+						<h1 class="entry-title" style="color:white">Add Category</h1>
 
 					    <!-- .entry-content -->
 
