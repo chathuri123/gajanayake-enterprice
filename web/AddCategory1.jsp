@@ -21,7 +21,7 @@
        
     <%
          
-          String category=request.getParameter("cat");
+      String category=request.getParameter("cat");
          
          //Increament ID    
       Statement stmt1 =conn.createStatement();
@@ -57,7 +57,7 @@
              
          
   
-             String sql ="INSERT INTO `gajanayake`.`motorbikes` (`CatID`) VALUES ('"+CatID+"')";
+             String sql ="INSERT INTO `gajanayake`.`category` (`CatID`,`CatName`) VALUES ('"+CatID+"','"+category+"')";
              stat.executeUpdate(sql);
              response.sendRedirect("AddCategory.jsp");
              session.setAttribute("noti","yes");

@@ -57,6 +57,7 @@ alert('Successfuly Added');
 
 
 </head>
+
 <% if(session.getAttribute("noti").toString()== "yes")
 {
     %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:noti()'>"%><%
@@ -86,14 +87,14 @@ session.setAttribute("noti","No");
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-left hfeed">
+<div id="primary" class="col-md-8 pull-right hfeed">
 									<!-- #post-39 -->
 
 					
 <div id="comments" class="comments-area">
     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">Add Category</h1>
-
+						
+<h1 class="entry-title" style="color:white">Add Category</h1>
 					    <!-- .entry-content -->
 
 					    	<footer class="clearfix">
@@ -101,32 +102,64 @@ session.setAttribute("noti","No");
 					</article>
 	
 	
-<div id="respond" class="comment-respond">
-<form class="comment-form" action="AddCategory1.jsp" method="post">
-							
-<p ><label>Category</label> 
-<input  type="text" id="cat" size="70" aria-required="true" name="cat" required placeholder="Enter the category"></p>
 
-<p class="form-submit">
- <input type="submit"  class="submit"  value="Add"> 
+			</div><!-- #comments .comments-area -->	
+                         <div id="respond" class="comment-respond">
+<%  
 
-</p>     					
-					
-</form>
-							</div><!-- #respond -->
-			</div><!-- #comments .comments-area -->			</div>
+ Statement stmt = conn.createStatement();
+ ResultSet rs = stmt.executeQuery("select * from category");
+%>
+
+
+<table border="1" align="left" width="600">
+
+  <tr>
+    <td>Category ID</td>
+    <td>Name</td>
+    
+
+  </tr>
+   <% while(rs.next()) {%>
+  <tr>
+    <td><%=rs.getString("CatID")%></td>
+    <td><%=rs.getString("CatName")%></td>
+   
+    <td><a href="DeleteCategory.jsp?catID=<%=rs.getString("CatID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
+   
+  </tr>
+ <%}%>
+</table>
+                         </div>
+</div>
 			
 				<div id="secondary" class="col-md-4" role="complementary">
 <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title" style="color:white">Add Category</h1>
-
+						
+<h1 class="entry-title">Add Category</h1>
 					    <!-- .entry-content -->
 
 					    	<footer class="clearfix">
 	    	</footer><!-- .entry -->
 					</article>
 <aside id="search-2" class="widget widget_search">
+    <div id="respond" class="comment-respond">
+    
+<form class="comment-form" action="AddCategory1.jsp" method="post">
+							
+<p ><label>Category</label> 
+<input  type="text" id="cat" size="40" aria-required="true" name="cat" required placeholder="Enter the category"></p>
 
+<p class="form-submit">
+<input type="submit"  class="submit"  value="Add"> 
+
+</p>     					
+					
+</form>
+							</div><!-- #respond -->
+    
+
+    
 
 </aside>
 
