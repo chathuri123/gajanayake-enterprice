@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row">
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+
 									<!-- #post-39 -->
 
 					
@@ -50,8 +50,9 @@
 	
 	
 <div id="respond" class="comment-respond">
+    <div id="secondary" class="col-md-10" >
 
-<br>
+
 
 <form action="ViewSpareParts.jsp" method="post"  class="comment-form">
     
@@ -70,10 +71,10 @@
  //Statement stmt1 = conn.createStatement();
  //ResultSet rs1 = stmt1.executeQuery("select * from spareparts");%>
  
- <br>
+<div class="table-responsive">
  <table border="1" align="left" width="600">
 
-  <tr>
+   <tr style="background-color: #555; color: #ffffff; ">
     <td>Spare Part ID</td>
     <td>Name</td>
     <td>Sub Category</td>
@@ -96,39 +97,25 @@
     
   
     <td><a href="ViewSpareParts1.jsp?spID=<%=rs.getString("SparePartID")%>">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
+    <td><a href="DeleteSparePart.jsp?spID=<%=rs.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');"title="Delete"><img src="Images/Delete.png"></a></td>
    
   </tr>
  <%}%>
 </table>
-</form>
+</div>
     
 
-  
+    </div>
 							</div><!-- #respond -->
-			</div><!-- #comments .comments-area -->			</div>
+			</div><!-- #comments .comments-area -->			
 			
-				<div id="secondary" class="col-md-4" >
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">View Product Details</h1>
+				
 
-					    <!-- .entry-content -->
-
-					    	<footer class="clearfix">
-	    	</footer><!-- .entry -->
-					</article>
-<aside id="search-2" class="widget widget_search">
-<div id="upload-area">
-   
-	<div id="preview" style="padding:10px">
-		<img width="400px" height="400px" src="Images/Pisston.jpg" id="thumb">
-	</div>
 
 	
     
-</div>
 
-</aside>
+
 
 </div><!-- #secondary.widget-area -->		</div>
 	</div>

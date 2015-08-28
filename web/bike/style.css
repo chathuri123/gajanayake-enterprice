@@ -1076,7 +1076,8 @@ pre {
     width: 75%; }
 
   .col-md-10 {
-    width: 83.33333%; }
+    width: 93.33333%;
+    min-height: 475px;}
 
   .col-md-11 {
     width: 91.66667%; }
@@ -1511,7 +1512,14 @@ table th[class*="col-"] {
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr.danger:hover > th {
   background-color: #ebcccc; }
-
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch; }
 @media (max-width: 767px) {
   .table-responsive {
     width: 100%;

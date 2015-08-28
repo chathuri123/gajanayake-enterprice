@@ -149,7 +149,7 @@ session.setAttribute("noti","No");
     
     </select>
     
-        <a href="AddSuplier.jsp">Add Supplier</a>
+        <a href="AddSupplier.jsp">Add Supplier</a>
     </p>
 							
 <p ><label>Engine No</label> 
