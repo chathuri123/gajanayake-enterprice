@@ -80,7 +80,7 @@
     <td>First name</td>
     <td>Last name</td>
     <td>Email</td>
-    <td>Address</td>
+    
     <td>NIC No</td>
     
 
@@ -91,7 +91,7 @@
     <td><%=rs1.getString("fname") %></td>
     <td><%=rs1.getString("lname") %></td>
     <td><%=rs1.getString("Email") %></td>
-    <td><%=rs1.getString("Address") %></td>
+    
     <td><%=rs1.getString("NIC") %></td>
 
     <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
