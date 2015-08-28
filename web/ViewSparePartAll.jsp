@@ -91,7 +91,7 @@
     <td><%=rs1.getString("Quantity")%></td>
     
   
-    <td><a href="ViewSpareParts1.jsp?spID=<%=rs1.getString("SparePartID")%>">View/edit</a><td>
+    <td><a href="ViewSpareParts1.jsp?spID=<%=rs1.getString("SparePartID")%>" title="View/Edit"><img style="width: 35px;height: 35px" src="Images/edit.png"></a></td>
     <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');"title="Delete"><img src="Images/Delete.png"></a></td>
    
   </tr>

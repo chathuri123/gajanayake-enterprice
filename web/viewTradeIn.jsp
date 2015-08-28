@@ -95,7 +95,7 @@
                                             <td><%=rs.getString("EngineCondition")%></td>
                                             <td><%=rs.getString("TireCondition")%></td>
                                             <td><%=rs.getString("OverollCondition")%></td>
-                                            <td><a href="">View/edit</a></td> 
+                                            <td><a href="" title="View/Edit"><img style="width: 35px;height: 35px" src="Images/edit.png"></a></td>
                                             <td><a href="DeleteTradeInBike.jsp?tradeID=<%=rs.getString("TradeId")%>" onclick="return confirm('Are you sure you want to delete this item?');" title="Delete" style="color:white"><img  src="Images/Delete.png">Delete</a></td>
                                             
 

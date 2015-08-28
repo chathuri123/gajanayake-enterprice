@@ -163,10 +163,8 @@ session.setAttribute("noti","No");
 
 	
 		
-                <p><input type="file" size="20" id="imageUpload" ></p>
-                <p class="form-submit">
-		
-                </p>
+                <p><input type="file" size="20" id="imageUpload" name="ufile" ></p>
+               
 	
 </div>
 </aside>

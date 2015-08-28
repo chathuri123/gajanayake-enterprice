@@ -98,7 +98,7 @@
     <td><%=rs1.getString("Address") %></td>
     <td><%=rs1.getString("NIC") %></td>
     
-    <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>">View/edit</a><td>
+    <td><a href="ViewCustomer1.jsp?ID=<%=rs1.getString("userID")%>" title="View/Edit"><img style="width: 35px;height: 35px" src="Images/edit.png"></a></td>
     <td><a href="DeleteCustomer.jsp?ID=<%=rs1.getString("userID")%>"  onclick="return confirm('Are you sure you want to delete this item?');" title="Delete"><img src="Images/Delete.png"></a></td>
    
    
