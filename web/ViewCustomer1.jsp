@@ -12,7 +12,61 @@
 
 <script type="text/javascript" src="validateScript.js"></script>
 <script>
+function xmlhttpPost(field,id)
+{ 
+var xmlHttpReq = false; 
+var self = this; 
 
+// Mozilla/Safari 
+if (window.XMLHttpRequest) { 
+self.xmlHttpReq = new XMLHttpRequest(); 
+} 
+// IE 
+else if (window.ActiveXObject) { 
+self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP"); 
+} 
+self.xmlHttpReq.open('POST', "EditCustomer.jsp", false); 
+self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
+self.xmlHttpReq.onreadystatechange = function()
+{
+    
+    if (self.xmlHttpReq.readyState != 4 && self.xmlHttpReq.status == 200)
+ {
+     document.getElementById(field).innerHTML = "Validating..";
+ }
+  else if (self.xmlHttpReq.readyState == 4)
+  { 
+     updatepage(field,self.xmlHttpReq.responseText); 
+  } 
+}
+var word1 ='fname='+ escape( document.getElementById('fname').value);
+var word2 ='lname='+ escape( document.getElementById('lname').value);
+var word3 ='nic='+ escape( document.getElementById('nic').value);
+var word4 ='Address='+ escape( document.getElementById('Address').value);
+var word5 ='BDay='+ escape( document.getElementById('BDay').value);
+var word6 ='tel='+ escape( document.getElementById('tel').value);
+var word7 ='email='+ escape( document.getElementById('email').value);
+var word8 ='id='+escape(id);
+
+var the_data =word1 +'&'+ word2+'&'+ word3+'&'+ word4+'&'+ word5+'&'+ word6+'&'+ word7+'&'+ word8;
+self.xmlHttpReq.send(the_data); 
+
+
+
+
+
+
+}
+
+
+
+
+function updatepage(field,str){ 
+document.getElementById(field).innerHTML = str;
+alert('Successfuly Added');
+
+
+} 
 
 </script>
 
@@ -46,7 +100,7 @@ session.setAttribute("noti","No");
  
  
  rs = stmt.executeQuery(sql);  %> <% while(rs.next()) {%>
-<form method="POST"    class="comment-form" action="EditCustomer.jsp?id=<%=id%>">
+<form method="POST"    class="comment-form" onsubmit='JavaScript:xmlhttpPost("success","<%=id%>")'>
 
 		<main>
                     
