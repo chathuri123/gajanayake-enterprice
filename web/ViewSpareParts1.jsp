@@ -79,8 +79,16 @@ alert('Successfuly Added');
 </script>
 
 </head>
-<body class="page page-id-39 page-template-default no-fittext basic">
-    
+<% if(session.getAttribute("noti").toString()== "yes")
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic' onload='JavaScript:notu()'>"%><%
+}
+else
+{
+    %><%="<body class='page page-id-39 page-template-default no-fittext basic'>"%><% 
+}
+session.setAttribute("noti","No");
+%>    
  <%@include file="DB_Connector.jsp"%>    
 	<div id="page">
 
@@ -130,13 +138,13 @@ alert('Successfuly Added');
  
  <%
    String catId=rs.getString("SubCategory");
-   out.println(catId);
+  
    
    String spareid=rs.getString("SparePartID");
  
  %>
 
-<form method="post"  class="comment-form" >
+<form method="post"  class="comment-form" action="UpdateSpareParts.jsp?SparePartID=<%=ID%>">
 <br>							
 <p ><label>Spare Part ID</label> 
     <%=" : "+rs.getString("SparePartID")%>
@@ -217,7 +225,7 @@ alert('Successfuly Added');
              
              <% while(rs5.next()) {%>
 
-             <option value="<%=rs5.getString("m.Name")%>"><%=rs5.getString("m.Name")%></option>
+             <option value="<%=rs5.getString("ModelID")%>"><%=rs5.getString("m.Name")%></option>
             
              <%}%>
              <% 
@@ -250,7 +258,7 @@ alert('Successfuly Added');
 <br>
 
 <p class="form-submit">
-    <input type="submit" onclick='JavaScript:xmlhttpPost("success","<%=ID%>")' class="submit"  value="Update"> 
+    <input type="submit"  class="submit"  value="Update"> 
 
 </p> 
 

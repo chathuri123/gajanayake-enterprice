@@ -4,16 +4,7 @@ package Home;
 
 
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author windya yasas
- */
 import com.mysql.jdbc.Connection;
 import java.sql.*;
 import java.sql.DriverManager;

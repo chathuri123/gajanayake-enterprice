@@ -51,6 +51,11 @@
         <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
 
 <a href="">Get Reports</a></li>
+        
+        <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
+<a href="AddCategory.jsp">Add Category</a></li>
+        <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">
+<a href="AddSubCategory.jsp">Add Sub Category</a></li>
 </ul>
 </li>
 <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-96">

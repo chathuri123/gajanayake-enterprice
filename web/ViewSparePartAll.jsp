@@ -37,30 +37,39 @@
 
 		</header>
 
-		<main>
-                     <br>  
-	<div class="container">
-		<div class="row">
+		<main >
+                     
+	<div class="container" >
+		<div class="row" >
 
-<div id="primary" class="col-md-8 pull-right hfeed">
+
 									<!-- #post-39 -->
 
 					
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area" >
 	
-	
+  <div id="secondary" class="col-md-10" >	
 <div id="respond" class="comment-respond">
+     <article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
+                                        <h1 class="entry-title">View All Products</h1>
 
-<br>
+                                        <!-- .entry-content -->
+
+                                        <footer class="clearfix">
+                                        </footer><!-- .entry -->
+                                    </article>	
+    
+
+
 
 <%
  Statement stmt1 = conn.createStatement();
  ResultSet rs1 = stmt1.executeQuery("select * from spareparts");%>
  
- <br>
+<div class="table-responsive">
  <table border="1" align="left" width="600">
 
-  <tr>
+   <tr style="background-color: #555; color: #ffffff; ">
     <td>Spare Part ID</td>
     <td>Name</td>
     <td>Sub Category</td>
@@ -82,42 +91,21 @@
     <td><%=rs1.getString("Quantity")%></td>
     
   
-    <td><a href="ViewSpareParts1.jsp?spID=<%=rs1.getString("SparePartID")%>">View/edit</a><td>
-    <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');">Remove</a>
+    <td><a href="ViewSpareParts1.jsp?spID=<%=rs1.getString("SparePartID")%>" title="View/Edit"><img style="width: 35px;height: 35px" src="Images/edit.png"></a></td>
+    <td><a href="DeleteSparePart.jsp?spID=<%=rs1.getString("SparePartID")%>" onclick="return confirm('Are you sure you want to delete this item?');"title="Delete"><img src="Images/Delete.png"></a></td>
    
   </tr>
  <%}%>
 </table>
-</form>
+</div>
     
 
   
 							</div><!-- #respond -->
-			</div><!-- #comments .comments-area -->			</div>
-			
-				<div id="secondary" class="col-md-4" >
-<article id="post-39" class="post-39 page type-page status-publish hentry xfolkentry">
-						<h1 class="entry-title">View Product Details</h1>
-
-					    <!-- .entry-content -->
-
-					    	<footer class="clearfix">
-	    	</footer><!-- .entry -->
-					</article>
-<aside id="search-2" class="widget widget_search">
-<div id="upload-area">
-   
-	<div id="preview" style="padding:10px">
-		<img width="400px" height="400px" src="Images/Pisston.jpg" id="thumb">
-	</div>
-
-	
-    
 </div>
-
-</aside>
-
-</div><!-- #secondary.widget-area -->		</div>
+			</div><!-- #comments .comments-area -->			
+			
+						</div>
 	</div>
 
 	</main><!-- main -->

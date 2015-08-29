@@ -95,7 +95,7 @@ session.setAttribute("noti","No");
 			</div>
 
 		</header>
-<form method="POST"    class="comment-form" action="Addcustomer1.jsp">
+<form method="POST"    class="comment-form" onsubmit='JavaScript:xmlhttpPost("success")'>
 
 
 		<main>

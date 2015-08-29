@@ -89,7 +89,7 @@ session.setAttribute("noti","No");
 			</div>
 
 		</header>
-<form method="POST"    class="comment-form" action="Addcustomer1.jsp?role=Customer">
+<form method="POST"    class="comment-form" onsubmit='JavaScript:xmlhttpPost("success")'>
 
 		<main>
                     
@@ -133,7 +133,7 @@ session.setAttribute("noti","No");
 
 <p class="form-submit">
         <input type="submit"  class="submit"  value="Add Customer"> 
-       <!-- onclick='JavaScript:xmlhttpPost("success")'-->
+       <!-- -->
 <div id="success" style="color:green"></div>
 </p>
 

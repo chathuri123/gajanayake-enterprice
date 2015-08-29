@@ -45,7 +45,7 @@
           { 
              Statement stat=conn.createStatement();
              
-             String sql="UPDATE `gajanayake`.`user` SET `fname` = '"+fname+"', `BDay` = '"+BDay+"', `tel` = '"+tel+"', `Address` = '"+lname+"', `lname` = '"+lname+"', `password` = '"+password+"', `Email` = '"+email+"', `NIC` = '"+nic+"', `nameWithIni` = '"+nameWithIni+"', `username` = '"+username+"' WHERE `user`.`userID` = '"+userID+"'";
+             String sql="UPDATE `gajanayake`.`user` SET `fname` = '"+fname+"', `BDay` = '"+BDay+"', `tel` = '"+tel+"', `Address` = '"+Address+"', `lname` = '"+lname+"', `password` = '"+password+"', `Email` = '"+email+"', `NIC` = '"+nic+"', `nameWithIni` = '"+nameWithIni+"', `username` = '"+username+"' WHERE `user`.`userID` = '"+userID+"'";
              stat.executeUpdate(sql);
              
               response.sendRedirect(url);
